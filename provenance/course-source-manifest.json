@@ -1,0 +1,462 @@
+{
+  "sourceArchive": "My Tasks - Local Storage - GET and POST - Image Picker.zip",
+  "archiveSha256": "cf82cf8c27bed22d7da403954bceba1262f38ab2310db482fffd31ada3cece46",
+  "sourceRoot": "MyTasks/",
+  "importDate": "2026-11-19",
+  "applicationSourceChanges": "None. Imported file bytes are unchanged.",
+  "readmeRelocation": "README.md retained as docs/COURSE_README.md without content changes.",
+  "excludedEntries": [
+    "__MACOSX/._MyTasks",
+    "__MACOSX/MyTasks/._.expo",
+    "MyTasks/.DS_Store",
+    "__MACOSX/MyTasks/._.DS_Store",
+    "__MACOSX/MyTasks/._LICENSE",
+    "__MACOSX/MyTasks/._app.json",
+    "MyTasks/expo-env.d.ts",
+    "__MACOSX/MyTasks/._expo-env.d.ts",
+    "__MACOSX/MyTasks/._.claude",
+    "__MACOSX/MyTasks/._README.md",
+    "__MACOSX/MyTasks/._.gitignore",
+    "__MACOSX/MyTasks/._package-lock.json",
+    "__MACOSX/MyTasks/._package.json",
+    "__MACOSX/MyTasks/._scripts",
+    "__MACOSX/MyTasks/._tsconfig.json",
+    "__MACOSX/MyTasks/._AGENTS.md",
+    "__MACOSX/MyTasks/._.git",
+    "__MACOSX/MyTasks/._.vscode",
+    "__MACOSX/MyTasks/._assets",
+    "__MACOSX/MyTasks/._src",
+    "__MACOSX/MyTasks/.expo/._types",
+    "__MACOSX/MyTasks/.expo/._web",
+    "MyTasks/.expo/README.md",
+    "__MACOSX/MyTasks/.expo/._README.md",
+    "__MACOSX/MyTasks/.expo/._dev",
+    "MyTasks/.expo/devices.json",
+    "__MACOSX/MyTasks/.expo/._devices.json",
+    "MyTasks/.claude/settings.json",
+    "__MACOSX/MyTasks/.claude/._settings.json",
+    "__MACOSX/MyTasks/scripts/._reset-project.js",
+    "MyTasks/.git/config",
+    "__MACOSX/MyTasks/.git/._config",
+    "__MACOSX/MyTasks/.git/._objects",
+    "MyTasks/.git/HEAD",
+    "__MACOSX/MyTasks/.git/._HEAD",
+    "__MACOSX/MyTasks/.git/._info",
+    "__MACOSX/MyTasks/.git/._logs",
+    "MyTasks/.git/description",
+    "__MACOSX/MyTasks/.git/._description",
+    "__MACOSX/MyTasks/.git/._hooks",
+    "__MACOSX/MyTasks/.git/._refs",
+    "MyTasks/.git/index",
+    "__MACOSX/MyTasks/.git/._index",
+    "MyTasks/.git/COMMIT_EDITMSG",
+    "__MACOSX/MyTasks/.git/._COMMIT_EDITMSG",
+    "__MACOSX/MyTasks/.vscode/._settings.json",
+    "__MACOSX/MyTasks/.vscode/._extensions.json",
+    "__MACOSX/MyTasks/assets/._images",
+    "__MACOSX/MyTasks/assets/._expo.icon",
+    "MyTasks/src/.DS_Store",
+    "__MACOSX/MyTasks/src/._.DS_Store",
+    "__MACOSX/MyTasks/src/._app",
+    "__MACOSX/MyTasks/src/._global.css",
+    "__MACOSX/MyTasks/src/._components",
+    "MyTasks/.expo/types/router.d.ts",
+    "__MACOSX/MyTasks/.expo/types/._router.d.ts",
+    "__MACOSX/MyTasks/.expo/web/._cache",
+    "__MACOSX/MyTasks/.expo/dev/._logs",
+    "__MACOSX/MyTasks/.git/objects/._pack",
+    "__MACOSX/MyTasks/.git/objects/._info",
+    "MyTasks/.git/info/exclude",
+    "__MACOSX/MyTasks/.git/info/._exclude",
+    "MyTasks/.git/info/refs",
+    "__MACOSX/MyTasks/.git/info/._refs",
+    "MyTasks/.git/logs/HEAD",
+    "__MACOSX/MyTasks/.git/logs/._HEAD",
+    "__MACOSX/MyTasks/.git/logs/._refs",
+    "MyTasks/.git/hooks/commit-msg.sample",
+    "__MACOSX/MyTasks/.git/hooks/._commit-msg.sample",
+    "MyTasks/.git/hooks/pre-rebase.sample",
+    "__MACOSX/MyTasks/.git/hooks/._pre-rebase.sample",
+    "MyTasks/.git/hooks/sendemail-validate.sample",
+    "__MACOSX/MyTasks/.git/hooks/._sendemail-validate.sample",
+    "MyTasks/.git/hooks/pre-commit.sample",
+    "__MACOSX/MyTasks/.git/hooks/._pre-commit.sample",
+    "MyTasks/.git/hooks/applypatch-msg.sample",
+    "__MACOSX/MyTasks/.git/hooks/._applypatch-msg.sample",
+    "MyTasks/.git/hooks/fsmonitor-watchman.sample",
+    "__MACOSX/MyTasks/.git/hooks/._fsmonitor-watchman.sample",
+    "MyTasks/.git/hooks/pre-receive.sample",
+    "__MACOSX/MyTasks/.git/hooks/._pre-receive.sample",
+    "MyTasks/.git/hooks/prepare-commit-msg.sample",
+    "__MACOSX/MyTasks/.git/hooks/._prepare-commit-msg.sample",
+    "MyTasks/.git/hooks/post-update.sample",
+    "__MACOSX/MyTasks/.git/hooks/._post-update.sample",
+    "MyTasks/.git/hooks/pre-merge-commit.sample",
+    "__MACOSX/MyTasks/.git/hooks/._pre-merge-commit.sample",
+    "MyTasks/.git/hooks/pre-applypatch.sample",
+    "__MACOSX/MyTasks/.git/hooks/._pre-applypatch.sample",
+    "MyTasks/.git/hooks/pre-push.sample",
+    "__MACOSX/MyTasks/.git/hooks/._pre-push.sample",
+    "MyTasks/.git/hooks/update.sample",
+    "__MACOSX/MyTasks/.git/hooks/._update.sample",
+    "MyTasks/.git/hooks/push-to-checkout.sample",
+    "__MACOSX/MyTasks/.git/hooks/._push-to-checkout.sample",
+    "__MACOSX/MyTasks/.git/refs/._heads",
+    "__MACOSX/MyTasks/.git/refs/._tags",
+    "__MACOSX/MyTasks/assets/images/._icon.png",
+    "__MACOSX/MyTasks/assets/images/._expo-badge.png",
+    "__MACOSX/MyTasks/assets/images/._android-icon-background.png",
+    "__MACOSX/MyTasks/assets/images/._tabIcons",
+    "__MACOSX/MyTasks/assets/images/._react-logo@2x.png",
+    "__MACOSX/MyTasks/assets/images/._logo-glow.png",
+    "__MACOSX/MyTasks/assets/images/._react-logo@3x.png",
+    "__MACOSX/MyTasks/assets/images/._favicon.png",
+    "__MACOSX/MyTasks/assets/images/._android-icon-foreground.png",
+    "__MACOSX/MyTasks/assets/images/._expo-logo.png",
+    "__MACOSX/MyTasks/assets/images/._react-logo.png",
+    "__MACOSX/MyTasks/assets/images/._android-icon-monochrome.png",
+    "__MACOSX/MyTasks/assets/images/._expo-badge-white.png",
+    "__MACOSX/MyTasks/assets/images/._splash-icon.png",
+    "__MACOSX/MyTasks/assets/images/._tutorial-web.png",
+    "__MACOSX/MyTasks/assets/expo.icon/._icon.json",
+    "__MACOSX/MyTasks/assets/expo.icon/._Assets",
+    "__MACOSX/MyTasks/src/app/.__layout.jsx",
+    "__MACOSX/MyTasks/src/app/._about.jsx",
+    "__MACOSX/MyTasks/src/app/._login.jsx",
+    "__MACOSX/MyTasks/src/app/._details.jsx",
+    "__MACOSX/MyTasks/src/app/._tasks.jsx",
+    "__MACOSX/MyTasks/src/components/._ImageInputList.jsx",
+    "__MACOSX/MyTasks/src/components/._TaskItem.jsx",
+    "__MACOSX/MyTasks/src/components/._ImageInput.jsx",
+    "__MACOSX/MyTasks/src/components/._AppTextInput.jsx",
+    "__MACOSX/MyTasks/.expo/web/cache/._production",
+    "MyTasks/.expo/dev/logs/start.log",
+    "__MACOSX/MyTasks/.expo/dev/logs/._start.log",
+    "MyTasks/.expo/dev/logs/export.log",
+    "__MACOSX/MyTasks/.expo/dev/logs/._export.log",
+    "MyTasks/.git/objects/pack/pack-46f5f240ba5fafb51c17a0109e16e04ec676c8fb.pack",
+    "__MACOSX/MyTasks/.git/objects/pack/._pack-46f5f240ba5fafb51c17a0109e16e04ec676c8fb.pack",
+    "MyTasks/.git/objects/pack/pack-46f5f240ba5fafb51c17a0109e16e04ec676c8fb.idx",
+    "__MACOSX/MyTasks/.git/objects/pack/._pack-46f5f240ba5fafb51c17a0109e16e04ec676c8fb.idx",
+    "MyTasks/.git/objects/pack/pack-46f5f240ba5fafb51c17a0109e16e04ec676c8fb.rev",
+    "__MACOSX/MyTasks/.git/objects/pack/._pack-46f5f240ba5fafb51c17a0109e16e04ec676c8fb.rev",
+    "MyTasks/.git/objects/pack/multi-pack-index",
+    "__MACOSX/MyTasks/.git/objects/pack/._multi-pack-index",
+    "MyTasks/.git/objects/info/packs",
+    "__MACOSX/MyTasks/.git/objects/info/._packs",
+    "__MACOSX/MyTasks/.git/logs/refs/._heads",
+    "MyTasks/.git/refs/heads/main",
+    "__MACOSX/MyTasks/.git/refs/heads/._main",
+    "__MACOSX/MyTasks/assets/images/tabIcons/._home@2x.png",
+    "__MACOSX/MyTasks/assets/images/tabIcons/._home@3x.png",
+    "__MACOSX/MyTasks/assets/images/tabIcons/._home.png",
+    "__MACOSX/MyTasks/assets/images/tabIcons/._explore@3x.png",
+    "__MACOSX/MyTasks/assets/images/tabIcons/._explore.png",
+    "__MACOSX/MyTasks/assets/images/tabIcons/._explore@2x.png",
+    "__MACOSX/MyTasks/assets/expo.icon/Assets/._grid.png",
+    "__MACOSX/MyTasks/assets/expo.icon/Assets/._expo-symbol 2.svg",
+    "__MACOSX/MyTasks/.expo/web/cache/production/._images",
+    "MyTasks/.git/logs/refs/heads/main",
+    "__MACOSX/MyTasks/.git/logs/refs/heads/._main",
+    "__MACOSX/MyTasks/.expo/web/cache/production/images/._favicon",
+    "__MACOSX/MyTasks/.expo/web/cache/production/images/favicon/._favicon-a4e030697a7571b3e95d31860e4da55d2f98e5e861e2b55e414f45a8556828ba-contain-transparent",
+    "MyTasks/.expo/web/cache/production/images/favicon/favicon-a4e030697a7571b3e95d31860e4da55d2f98e5e861e2b55e414f45a8556828ba-contain-transparent/favicon-48.png",
+    "__MACOSX/MyTasks/.expo/web/cache/production/images/favicon/favicon-a4e030697a7571b3e95d31860e4da55d2f98e5e861e2b55e414f45a8556828ba-contain-transparent/._favicon-48.png"
+  ],
+  "files": [
+    {
+      "archiveEntry": "MyTasks/LICENSE",
+      "projectPath": "LICENSE",
+      "bytes": 1106,
+      "sha256": "fb3ca4a837f5779e83cef89b78253a8949cfb9429c340309f62d0465ec6610b4"
+    },
+    {
+      "archiveEntry": "MyTasks/app.json",
+      "projectPath": "app.json",
+      "bytes": 1339,
+      "sha256": "c83b3dc45d1b82773f3763059891ec502d4b11dfa78cee5c562f862ed8ac2f04"
+    },
+    {
+      "archiveEntry": "MyTasks/README.md",
+      "projectPath": "docs/COURSE_README.md",
+      "bytes": 2183,
+      "sha256": "81a68c7166fe840f32019fb3bd12eada9cfc466a01fde5f14e073cc6d601a07f"
+    },
+    {
+      "archiveEntry": "MyTasks/.gitignore",
+      "projectPath": ".gitignore",
+      "bytes": 449,
+      "sha256": "1044ca3cb6bbe9ef040cdad2c9314bf75d93129778690378f2f9e710e1fe23d2"
+    },
+    {
+      "archiveEntry": "MyTasks/package-lock.json",
+      "projectPath": "package-lock.json",
+      "bytes": 318424,
+      "sha256": "e72b2d05368bd4921885edac2dc425b5e8a9736378aa48dcced670211e2fb04a"
+    },
+    {
+      "archiveEntry": "MyTasks/package.json",
+      "projectPath": "package.json",
+      "bytes": 1374,
+      "sha256": "d082bc96edc77eeee19f2970379eeb4f2f16815d7ca04b35616eba5be6809154"
+    },
+    {
+      "archiveEntry": "MyTasks/tsconfig.json",
+      "projectPath": "tsconfig.json",
+      "bytes": 298,
+      "sha256": "2c427a7bc50569dc5167d39425793d8bba22eeffcb213fff05f6274980784508"
+    },
+    {
+      "archiveEntry": "MyTasks/AGENTS.md",
+      "projectPath": "AGENTS.md",
+      "bytes": 2598,
+      "sha256": "b7d381dd55800d242252e8bf89a40b026586d254e34908210931bc35582396a3"
+    },
+    {
+      "archiveEntry": "MyTasks/scripts/reset-project.js",
+      "projectPath": "scripts/reset-project.js",
+      "bytes": 3710,
+      "sha256": "549922a40b983de34068b36d7879fcc8aed6c60b8d45b3c7b866267e766ae9fe"
+    },
+    {
+      "archiveEntry": "MyTasks/.vscode/settings.json",
+      "projectPath": ".vscode/settings.json",
+      "bytes": 152,
+      "sha256": "c9d2a3300e5453b399d9a092a29aabb67adfc59623abd5b03b1143557386c39c"
+    },
+    {
+      "archiveEntry": "MyTasks/.vscode/extensions.json",
+      "projectPath": ".vscode/extensions.json",
+      "bytes": 50,
+      "sha256": "f54cd822dce0af53953015f71ce04f91d4fcec4ac02ecb28658d636004c4bbce"
+    },
+    {
+      "archiveEntry": "MyTasks/src/global.css",
+      "projectPath": "src/global.css",
+      "bytes": 429,
+      "sha256": "3d65b4b82fe8112cd874d5058bb78b94743d2679958a421191802f4239cedf56"
+    },
+    {
+      "archiveEntry": "MyTasks/assets/images/icon.png",
+      "projectPath": "assets/images/icon.png",
+      "bytes": 799005,
+      "sha256": "7a667804bb80a6a424a5daf18a2599c4f32237cf06fe78fc0de45dbb09e0eccf"
+    },
+    {
+      "archiveEntry": "MyTasks/assets/images/expo-badge.png",
+      "projectPath": "assets/images/expo-badge.png",
+      "bytes": 4137,
+      "sha256": "ff353c7efadbd379903923cb604fca11c908cba0d4658cc2bd1f147d98317249"
+    },
+    {
+      "archiveEntry": "MyTasks/assets/images/android-icon-background.png",
+      "projectPath": "assets/images/android-icon-background.png",
+      "bytes": 17549,
+      "sha256": "fb139c2dee362ebf2070e23b96da6fc0d43f8492de38b8af1fd7223e19b5861d"
+    },
+    {
+      "archiveEntry": "MyTasks/assets/images/react-logo@2x.png",
+      "projectPath": "assets/images/react-logo@2x.png",
+      "bytes": 14225,
+      "sha256": "fa600be9ad2f869c7a8dbaffc78bb15af741123e1319c948f0be51753a153cde"
+    },
+    {
+      "archiveEntry": "MyTasks/assets/images/logo-glow.png",
+      "projectPath": "assets/images/logo-glow.png",
+      "bytes": 331624,
+      "sha256": "bbd98a3f3c12d090f4df6065b7462fcdf6bc266209d002b4ef5fe554c245f66c"
+    },
+    {
+      "archiveEntry": "MyTasks/assets/images/react-logo@3x.png",
+      "projectPath": "assets/images/react-logo@3x.png",
+      "bytes": 21252,
+      "sha256": "cd84e02a5d542a3e71b7fa10a685c1b9fb51db4aff92aca6c0da6461ce17be16"
+    },
+    {
+      "archiveEntry": "MyTasks/assets/images/favicon.png",
+      "projectPath": "assets/images/favicon.png",
+      "bytes": 1129,
+      "sha256": "a4e030697a7571b3e95d31860e4da55d2f98e5e861e2b55e414f45a8556828ba"
+    },
+    {
+      "archiveEntry": "MyTasks/assets/images/android-icon-foreground.png",
+      "projectPath": "assets/images/android-icon-foreground.png",
+      "bytes": 78796,
+      "sha256": "9e3d0315a33c6799de601dd34cd8bf8cc3a8d16f3bf75592baec2ceb7240b391"
+    },
+    {
+      "archiveEntry": "MyTasks/assets/images/expo-logo.png",
+      "projectPath": "assets/images/expo-logo.png",
+      "bytes": 3317,
+      "sha256": "27b060a757a29038c9618586baa0ba3894dbe60d084c6059df497ff429c2d92f"
+    },
+    {
+      "archiveEntry": "MyTasks/assets/images/react-logo.png",
+      "projectPath": "assets/images/react-logo.png",
+      "bytes": 6341,
+      "sha256": "224b7636b15e672801579b5b418077cbc2ca42f0146389062364356b0ecb5c5c"
+    },
+    {
+      "archiveEntry": "MyTasks/assets/images/android-icon-monochrome.png",
+      "projectPath": "assets/images/android-icon-monochrome.png",
+      "bytes": 4140,
+      "sha256": "6371fc2c12e33ad2215a86c281db3d682a81bebe7c957a842c13b8bf00cceb83"
+    },
+    {
+      "archiveEntry": "MyTasks/assets/images/expo-badge-white.png",
+      "projectPath": "assets/images/expo-badge-white.png",
+      "bytes": 4129,
+      "sha256": "d9ba28c5e93aea3c2dabd901ee96fea3bb296ad8e648f6f64706dae11a1a62bd"
+    },
+    {
+      "archiveEntry": "MyTasks/assets/images/splash-icon.png",
+      "projectPath": "assets/images/splash-icon.png",
+      "bytes": 3317,
+      "sha256": "27b060a757a29038c9618586baa0ba3894dbe60d084c6059df497ff429c2d92f"
+    },
+    {
+      "archiveEntry": "MyTasks/assets/images/tutorial-web.png",
+      "projectPath": "assets/images/tutorial-web.png",
+      "bytes": 58959,
+      "sha256": "e372ec23ad6262e2e0dc2799ce416b495a631a565bcd24f0615d4afc04dac3bd"
+    },
+    {
+      "archiveEntry": "MyTasks/assets/expo.icon/icon.json",
+      "projectPath": "assets/expo.icon/icon.json",
+      "bytes": 780,
+      "sha256": "747c56e178222a6255c6dd61c5de011b286cdc935febe89f04d1b191c3d076fe"
+    },
+    {
+      "archiveEntry": "MyTasks/src/app/_layout.jsx",
+      "projectPath": "src/app/_layout.jsx",
+      "bytes": 950,
+      "sha256": "5d28d6bb07e9a90438af08f471592046e1d392927f108fa5e5ff0085e8699d67"
+    },
+    {
+      "archiveEntry": "MyTasks/src/app/about.jsx",
+      "projectPath": "src/app/about.jsx",
+      "bytes": 945,
+      "sha256": "4e756b8243893cc2db2de1ec7d5557d673b1e15d0133a7044373bed188940585"
+    },
+    {
+      "archiveEntry": "MyTasks/src/app/login.jsx",
+      "projectPath": "src/app/login.jsx",
+      "bytes": 2667,
+      "sha256": "6ee8ac2b4af8c96eb61b44ed93173f3235d822b88112ef6f14fba47f4c2c8d19"
+    },
+    {
+      "archiveEntry": "MyTasks/src/app/details.jsx",
+      "projectPath": "src/app/details.jsx",
+      "bytes": 1958,
+      "sha256": "c21dcf3afc4b930019340e3a9b05661d482038f9e50ded1eb1b21a8be5028ff7"
+    },
+    {
+      "archiveEntry": "MyTasks/src/app/index.jsx",
+      "projectPath": "src/app/index.jsx",
+      "bytes": 1154,
+      "sha256": "8a264460bf99bfe69ee4c5fb2f3143731fe7b1a09263aa2a39049bdae2fcafd2"
+    },
+    {
+      "archiveEntry": "MyTasks/src/app/httprequest.jsx",
+      "projectPath": "src/app/httprequest.jsx",
+      "bytes": 2608,
+      "sha256": "054a8b1b7fbf5814f804f9d9b58ab7b9da843808ae1df4f1e640df8455ad7da9"
+    },
+    {
+      "archiveEntry": "MyTasks/src/app/tasks.jsx",
+      "projectPath": "src/app/tasks.jsx",
+      "bytes": 7938,
+      "sha256": "e22aeef580af2718355aebe022ef7cde2f7776e242be836a27df763b91c9cf6f"
+    },
+    {
+      "archiveEntry": "MyTasks/src/components/ImageInputList.jsx",
+      "projectPath": "src/components/ImageInputList.jsx",
+      "bytes": 960,
+      "sha256": "3fe47916d5656de626770806002eab3ad5ea381a6e47dfc44f9f56c7e2dd1e72"
+    },
+    {
+      "archiveEntry": "MyTasks/src/components/TaskItem.jsx",
+      "projectPath": "src/components/TaskItem.jsx",
+      "bytes": 1179,
+      "sha256": "7925e4a1519c653209b7f568034088d3e7240e9693ef2643486d786ddcf4650c"
+    },
+    {
+      "archiveEntry": "MyTasks/src/components/AppScreen.jsx",
+      "projectPath": "src/components/AppScreen.jsx",
+      "bytes": 715,
+      "sha256": "69c8b933d0c898354f8733c1e6f4eb4718b1e55694db4e0ff32f00a99d18281d"
+    },
+    {
+      "archiveEntry": "MyTasks/src/components/AppButton.jsx",
+      "projectPath": "src/components/AppButton.jsx",
+      "bytes": 583,
+      "sha256": "866f79856708e74923cdae5aff3f6ad19344cb056d77f5b5bcf14b09cf201901"
+    },
+    {
+      "archiveEntry": "MyTasks/src/components/ImageInput.jsx",
+      "projectPath": "src/components/ImageInput.jsx",
+      "bytes": 2362,
+      "sha256": "dc681408dd9b56b1de907f727886ac4d33cf4ec8376df8c0661337e76cd7372c"
+    },
+    {
+      "archiveEntry": "MyTasks/src/components/AppTextInput.jsx",
+      "projectPath": "src/components/AppTextInput.jsx",
+      "bytes": 883,
+      "sha256": "087d75a6d6a1b46372da9de551f220b062e81440d8a14012de348f54c7a46c23"
+    },
+    {
+      "archiveEntry": "MyTasks/src/components/TaskFilters.jsx",
+      "projectPath": "src/components/TaskFilters.jsx",
+      "bytes": 1412,
+      "sha256": "8d0d2be2ff2de1132be781af958e63e596c39cbd470394a81759f629c7357a7f"
+    },
+    {
+      "archiveEntry": "MyTasks/assets/images/tabIcons/home@2x.png",
+      "projectPath": "assets/images/tabIcons/home@2x.png",
+      "bytes": 343,
+      "sha256": "21c5a07df9017d97464a0a8256e265288f2fca0741ca651de05e12b32f32f5ab"
+    },
+    {
+      "archiveEntry": "MyTasks/assets/images/tabIcons/home@3x.png",
+      "projectPath": "assets/images/tabIcons/home@3x.png",
+      "bytes": 479,
+      "sha256": "fe5b397975e7cb70ae7a122472d174ed12ec2ae106f7b49c968225ad37f8b3b8"
+    },
+    {
+      "archiveEntry": "MyTasks/assets/images/tabIcons/home.png",
+      "projectPath": "assets/images/tabIcons/home.png",
+      "bytes": 253,
+      "sha256": "3829632ec7d495225395f5da3d0942935d7d055979b174613d1ade82fe420e76"
+    },
+    {
+      "archiveEntry": "MyTasks/assets/images/tabIcons/explore@3x.png",
+      "projectPath": "assets/images/tabIcons/explore@3x.png",
+      "bytes": 468,
+      "sha256": "2f3e43801df70ebe83273b90a7d170bacf5ca74a8a8dc5c154a020c2c8b06609"
+    },
+    {
+      "archiveEntry": "MyTasks/assets/images/tabIcons/explore.png",
+      "projectPath": "assets/images/tabIcons/explore.png",
+      "bytes": 215,
+      "sha256": "e2dea1c2d20929d83e8eebd74818e808b1b72e376d3a1f3a03679fff0255d073"
+    },
+    {
+      "archiveEntry": "MyTasks/assets/images/tabIcons/explore@2x.png",
+      "projectPath": "assets/images/tabIcons/explore@2x.png",
+      "bytes": 347,
+      "sha256": "1b54913b3a0acc3e1fb72d3b9b79ad04814304b35bbb9d03a533e6130ad6c26a"
+    },
+    {
+      "archiveEntry": "MyTasks/assets/expo.icon/Assets/grid.png",
+      "projectPath": "assets/expo.icon/Assets/grid.png",
+      "bytes": 53681,
+      "sha256": "8247d79a2b31328fe4e330a973e6fae16924ed9aebd72c64d464d6856ab18c72"
+    },
+    {
+      "archiveEntry": "MyTasks/assets/expo.icon/Assets/expo-symbol 2.svg",
+      "projectPath": "assets/expo.icon/Assets/expo-symbol 2.svg",
+      "bytes": 608,
+      "sha256": "ad117d20fd819f4ec71876ce09c0e8b9275b1f20c5ec3c9d7d1914977ceffec6"
+    }
+  ]
+}
