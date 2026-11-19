@@ -1,0 +1,42 @@
+FLAMINARY — PROPOSED SCREEN FLOW
+
+Welcome (1)
+    |
+    v
+Login (2) -- invalid credentials --> errors on Login
+    |
+    | valid mock credentials
+    v
++---------------------------------------------------------+
+| Main navigation                                         |
+|                                                         |
+| Today (3) <-----> Explore (4) <-----> Progress (5)         |
+| Daily prompt     All challenges      Completed challenges|
++---------------------------------------------------------+
+    |                  |                    |
+    +------------------+--------------------+
+                       |
+                       v
+                Challenge Details (6)
+                   |            |
+          mark complete      edit challenge
+                   |            |
+            update Progress     v
+                         Challenge Editor (7)
+                         add or edit mode
+                                |
+                       validate, then save
+                                |
+                     Details / originating list
+
+Explore -- Add challenge --> Challenge Editor (7)
+Editor -- Cancel / Back --> originating screen without saving
+Details -- Back --> originating Today, Explore, or Progress screen
+Details -- Delete --> confirmation --> originating list
+                       cancel --> stay on Details
+Main navigation -- Logout --> Login (clear signed-in navigation history)
+
+An empty collection offers Add challenge. A missing/deleted detail item offers
+Return to Explore. Invalid forms remain open with field-level messages.
+
+This diagram is a plan. The unchanged course baseline uses MyTasks routes.
