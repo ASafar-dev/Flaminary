@@ -1,19 +1,57 @@
-# Baseline verification results
+# Flaminary verification results
 
-Checked on November 19, 2026, on Windows with Node.js 24.20.0 and npm 11.19.0. These results concern the unchanged MyTasks course baseline, not the proposed drummer app.
+Final-build verification record, prepared November 21, 2026. Checks ran on Windows with Node.js 24.20.0 and npm 11.19.0. Browser checks used Chromium 159.0.8154.6 at a 390 × 844 mobile viewport.
 
-| Check | Result | Meaning |
+## Final build checks
+
+| Check | Status | Scope |
 | --- | --- | --- |
-| Source checksum comparison | Passed: all 49 imported files match the recorded SHA-256 values | No imported application source, assets, configuration, or lockfile was edited |
-| `npm ci --ignore-scripts --no-audit --no-fund` | Passed; 626 packages installed | Locked dependencies installed; lifecycle scripts were deliberately not run |
-| `npx expo export --platform web` | Passed | Metro compiled the web application and static routes into the ignored dist directory |
-| `npx tsc --noEmit` | Failed with TS18003, no inputs | Supplied tsconfig includes TypeScript files, while the course screens are JSX; the generated Expo declaration omitted from the import was the only matching source entry |
-| `npx expo lint` | Not completed: ESLint configuration is absent | Declined the tool's offer to install/configure ESLint because that would change the supplied package configuration and lockfile |
-| Expo Go / development build / native runtime | Not tested | No Android or iOS runtime validation is claimed |
-| Completed drummer workflows | Not implemented | The acceptance checks in the submission checklist remain for the student's implementation |
+| Data and storage regression tests | Passed: 11 tests | `npm test` |
+| Expo lint | Passed | `npm run lint` |
+| JavaScript parsing/module check | Passed | `npm run typecheck`; allowJs enabled, checkJs disabled |
+| Web production export | Passed | `npx expo export --platform web --max-workers 2` |
+| Android production bundle | Passed | Hermes bundle generated; this is not native device execution |
+| Locked dependency consistency | Passed | `npm ci --dry-run --ignore-scripts --no-audit --no-fund --offline` |
+| Browser interaction checks | Passed: 10 workflows, no page errors | Actual UI actions and storage fault injection; [machine-readable results](ui-results.json) |
+| Source ZIP/repository comparison | Recorded with the release | Archive exported from v1.0.0; full SHA, checksum, and comparison in the accompanying release record |
+| GitHub commit signatures | Checked through GitHub's verification field | Release history on main is signed and verified; exact SHA/status list accompanies the release |
 
-The web export includes the course's six routes: welcome, login, tasks, about, details, and HTTP demonstration, plus framework routes. A successful export does not prove interactive behaviour, persistence correctness, native image-picker permissions, or grading compliance.
+## Runtime coverage
 
-Preserved issues found during source inspection include the welcome redirect bypassing login, concurrent initial load/save storage effects, stale detail parameters, immediate deletion, and missing editing/completion/logout controls. Loading and saving failures are logged rather than displayed to the user. No source changes were made to correct them.
+The browser workflows covered invalid login, incorrect credentials, successful login, combined filters/search, no results, invalid forms, failed creation, successful creation, editing and Back, completion and undo, progress totals, cold reload, unsaved cancellation, deletion cancellation, failed deletion, confirmed deletion, logout, direct protected URLs, browser Back, deleting all items, empty persistence, damaged storage, and retry recovery. The test script used real rendered controls. Deliberate storage failures were injected only into the isolated test browser.
 
-Recheck source preservation and the repository/archive match when packaging. The release record accompanying the ZIP identifies the actual commit and archive checksum. Native testing, final screenshots, and a narrated MP4 remain outstanding.
+Native Expo Go, Android/iOS devices or emulators, and development builds were not run. A successful bundle does not establish native runtime coverage. The JSX check is not full JavaScript type checking.
+
+## Screenshots and narrated recording
+
+The screenshots show the actual browser app at mobile width. Sample custom challenges were created through the editor during verification.
+
+| Screen | Image |
+| --- | --- |
+| Welcome | [Welcome](screenshots/01-welcome.png) |
+| Login | [Login](screenshots/02-login.png) |
+| Today | [Daily challenge](screenshots/03-today.png) |
+| Explore | [Archive](screenshots/04-explore.png) |
+| Challenge details | [Details](screenshots/05-details.png) |
+| Challenge editor | [Editor](screenshots/06-editor.png) |
+| Progress | [Progress](screenshots/07-progress.png) |
+| No search results | [No results](screenshots/08-no-results.png) |
+| Confirm deletion | [Confirmation](screenshots/09-delete-confirmation.png) |
+| Empty library | [Empty state](screenshots/10-empty-library.png) |
+
+The accompanying `Flaminary-demo.mp4` is an approximately five-minute recording of real browser interactions, with Windows Hazel synthetic narration. Its [narration script](DEMO_SCRIPT.txt) is included. The recording demonstrates the web app and identifies AI assistance and native testing limits. It is delivered separately from the source ZIP and is available with the [v1.0.0 release](https://github.com/ASafar-dev/Flaminary/releases/tag/v1.0.0).
+
+## Important behaviours to verify
+
+- Welcome leads to Login. Invalid fields and incorrect credentials show errors; correct credentials open the app.
+- Direct navigation and Back do not reopen protected screens after logout.
+- Creating and editing change the shared collection and current details consistently.
+- Delete cancellation preserves the item; confirmed deletion removes it.
+- Completion/undo update details, Progress, and totals.
+- Search/category/status filters combine correctly and have clear no-results feedback.
+- The collection remains populated after restart; a deliberately emptied collection remains empty.
+- Failed/corrupt storage reads do not overwrite saved data. Failed writes leave the visible collection unchanged and show an error.
+- Daily selection stays stable during the day and handles deletion, an empty collection, and the next local date.
+- Mobile-width layout has readable fields, usable touch targets, working scrolling, and no clipped content.
+
+The data tests exercise schema validation, missing versus empty stores, daily selection, corrupted input, ordered writes, and failed operations. UI behaviour needs runtime checks in addition to those tests.

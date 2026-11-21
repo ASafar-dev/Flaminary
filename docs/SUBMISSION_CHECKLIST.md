@@ -1,47 +1,52 @@
-# Final submission checklist
+# Submission checklist
 
-This baseline is not ready for submission. The student must complete the drummer app and replace preparation-only status statements with accurate final information.
+Use this checklist for the final individual submission. Implementation, command checks, native testing, screenshots, video, instructor access, and course approval are separate items; do not claim one establishes the others.
 
-## Functional checks on the chosen test platform
+## Functional review
 
-- Welcome opens Login; invalid email, invalid password format, and incorrect credentials show understandable errors.
-- Valid credentials open the main screens. Logout returns to Login, and Back cannot reopen signed-in content.
-- Explore shows realistic drum challenges. A selected challenge opens correct, current details.
-- A valid new challenge appears across the app; invalid input cannot be saved.
-- Editing updates the same challenge everywhere. Cancel discards unsaved form changes.
-- Delete requires confirmation. Cancel preserves the item; confirming removes it consistently.
-- Search and filters work together and provide a clear no-results state.
-- Marking and unmarking completion updates details, progress, and counts consistently.
-- Today's challenge stays stable within a day. Deleted or missing challenges and an empty collection are handled safely.
-- Added, edited, deleted, and completed data survive a restart. Delete every challenge, restart, and confirm the collection remains empty.
-- Initial loading, invalid stored data, and unsuccessful storage operations produce useful visible feedback.
-- All buttons, links, and Back actions work. Check keyboard behaviour, long text, readability, and tap targets on the device.
+- Welcome opens Login; invalid formats and incorrect mock credentials show understandable errors.
+- Correct credentials open the main app. Logout removes signed-in access, including direct routes and Back navigation.
+- Today shows the assigned challenge. Explore combines text/category/status filters correctly.
+- Details resolve a challenge by its current ID and reflect edits/completion consistently.
+- New and edited challenges pass Zod validation. Cancel does not save.
+- Delete requires confirmation; cancellation preserves the challenge.
+- Completion and undo update Progress and the derived counts/minutes.
+- Missing/deleted IDs, empty collection, and no search results offer useful recovery actions.
+- Added, edited, deleted, and completed data survive restart. Delete every challenge, restart, and confirm the collection stays empty.
+- Real loading and unsuccessful storage operations have visible feedback.
+- Check all links/buttons, keyboard behaviour, long text, scrolling, and tap targets on the actual submission platform.
 
-## Repository and ZIP
+## Repository and archive
 
-- Obtain and retain instructor proposal approval.
-- Preserve source credits, licenses, and an accurate AI-use statement.
-- Commit each actual feature and fix as it is implemented. Verify the resulting commit signatures on GitHub.
-- Grant the instructor access to the private repository, or deliberately choose the required sharing setting.
-- Document setup using `npm ci` and `npx expo start`, demo credentials, implemented features, known limitations, and the actual tested platform and Expo Go/development-build version.
-- Record the final submission commit in the README using an unambiguous release tag, and include its full SHA in a matching release record.
-- Export the project ZIP from that exact commit. Include package.json, the original/current package lock, Expo configuration, assets, and source. Exclude node_modules, .expo, generated builds, and .git.
-- Compare the ZIP contents against the committed source and check extraction and startup from a fresh folder.
+- Obtain the required proposal approval and confirm the instructor's AI-use policy. Approval is not recorded by this repository.
+- Preserve licenses, source credits, and the honest AI-use statement.
+- Keep meaningful commits for actual implementation steps and verify their signatures on GitHub.
+- Grant the instructor access to the private repository before sharing its link.
+- Record the final version as tag v1.0.0 and include the full commit SHA in the adjacent release record.
+- Export the ZIP from that exact tagged commit. Include source, required assets, Expo configuration, package.json, and package-lock.json.
+- Exclude node_modules, .expo, generated builds, .git, and local machine files.
+- Compare ZIP paths/content with the committed tree. Check installation/startup after extracting into a fresh directory.
 
-## Screenshots and narrated MP4
+## README and testing evidence
 
-Capture the completed Welcome/Login, Today, Explore, Details, Editor, and Progress screens. Capture useful validation and empty-state examples. Current MyTasks screenshots would show only the baseline and must not be labelled as the completed drummer app.
+- Keep `npm ci` and `npx expo start` instructions and the mock login credentials accurate.
+- List implemented features and material limitations.
+- Identify the real browser/native test platform and whether Expo Go or a development build was used.
+- Report web testing separately from Android/iOS testing. Do not claim native testing based only on a web export.
+- Include the screen-flow diagram and actual main-screen screenshots.
 
-Suggested five-minute recording:
+## Narrated demonstration
 
-| Time | Show and explain |
+Record approximately five minutes of the actual app and export MP4. Use narration that explains what the viewer sees; disclose AI-created narration if used.
+
+| Time | Demonstrate |
 | --- | --- |
-| 0:00–0:35 | App name, intended audience, creative-practice problem, and welcome screen |
-| 0:35–1:05 | Invalid login feedback, then valid mock login |
-| 1:05–1:50 | Daily prompt, collection search/filter, and selected details |
+| 0:00–0:35 | App name, audience, practice problem, and welcome screen |
+| 0:35–1:05 | Invalid login feedback, then correct mock login |
+| 1:05–1:50 | Daily prompt, archive search/filters, and current details |
 | 1:50–3:05 | Invalid editor input, create, edit, delete cancel, and confirmed deletion |
-| 3:05–4:10 | Complete a challenge, show progress, restart, and demonstrate persistence |
-| 4:10–4:40 | Empty/no-results behaviour and logout/back navigation |
-| 4:40–5:00 | Source credits, AI-use disclosure, test platform, and known limitations |
+| 3:05–4:10 | Complete/undo, Progress, and persistence after restart |
+| 4:10–4:40 | Empty/no-results feedback and logout/protected navigation |
+| 4:40–5:00 | Course credits, AI-use statement, actual test platform, and limitations |
 
-Record the actual completed app with the student's own narration and export MP4. No demonstration video or final app screenshots were fabricated for this baseline.
+Capture Welcome/Login, Today, Explore, Details, Editor, and Progress. Verify the video and screenshots depict the final tagged version rather than the earlier course baseline.

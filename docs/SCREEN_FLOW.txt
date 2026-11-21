@@ -1,42 +1,51 @@
-FLAMINARY — PROPOSED SCREEN FLOW
+FLAMINARY — SEVEN-SCREEN FLOW
 
-Welcome (1)
+Welcome (1) /
     |
     v
-Login (2) -- invalid credentials --> errors on Login
+Login (2) /login -- invalid input / wrong credentials --> errors on Login
     |
     | valid mock credentials
     v
-+---------------------------------------------------------+
-| Main navigation                                         |
-|                                                         |
-| Today (3) <-----> Explore (4) <-----> Progress (5)         |
-| Daily prompt     All challenges      Completed challenges|
-+---------------------------------------------------------+
-    |                  |                    |
-    +------------------+--------------------+
-                       |
-                       v
-                Challenge Details (6)
-                   |            |
-          mark complete      edit challenge
-                   |            |
-            update Progress     v
-                         Challenge Editor (7)
-                         add or edit mode
-                                |
-                       validate, then save
-                                |
-                     Details / originating list
++---------------------------------------------------------------+
+| Main tabs                                                     |
+|                                                               |
+| Today (3) <-------> Explore (4) <-------> Progress (5)            |
+| /today             /explore             /progress              |
+| Daily prompt       Collection           Completed challenges    |
++---------------------------------------------------------------+
+    |                    |                    |
+    +--------------------+--------------------+
+                         |
+                         v
+               Challenge Details (6)
+               /challenge/[id]
+                    |             |
+           mark complete       edit challenge
+           or unfinished          |
+                    |             v
+             update Progress   Challenge Editor (7)
+                               /editor?id=...
+                                      |
+                               validate, then save
+                                      |
+                                return to Details
 
-Explore -- Add challenge --> Challenge Editor (7)
+Explore -- Create --> Challenge Editor (7) /editor
+New challenge -- valid Save --> its Challenge Details
+Editor -- invalid Save --> field errors; keep the form's values
 Editor -- Cancel / Back --> originating screen without saving
 Details -- Back --> originating Today, Explore, or Progress screen
-Details -- Delete --> confirmation --> originating list
-                       cancel --> stay on Details
-Main navigation -- Logout --> Login (clear signed-in navigation history)
+Details -- Delete --> confirmation --> originating screen
+                       Cancel --> stay on Details
+Progress -- Log out --> entry flow; signed-in routes become inaccessible
 
-An empty collection offers Add challenge. A missing/deleted detail item offers
-Return to Explore. Invalid forms remain open with field-level messages.
+Empty collection --> Create a challenge
+No search/filter results --> Clear search and filters
+Missing/deleted detail ID --> Explore challenges
+Initial storage read --> actual loading feedback
+Failed storage load --> visible error and Try loading again
+Failed save --> visible error; keep the last saved library
 
-This diagram is a plan. The unchanged course baseline uses MyTasks routes.
+Mock session is in memory. A cold restart returns to entry/login while local
+challenge data and completion records remain in AsyncStorage.

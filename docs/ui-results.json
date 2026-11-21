@@ -1,0 +1,18 @@
+{
+  "date": "2026-11-21",
+  "browser": "159.0.8154.6",
+  "viewport": "390x844",
+  "checks": [
+    "Welcome, invalid login and incorrect credentials",
+    "Combined archive search and filters, plus no-results state",
+    "Create-form validation and failed save leave library unchanged",
+    "Editing updates details and keeps logical back navigation",
+    "Completion and undo update progress",
+    "Cold reload preserves additions, edits, completion and daily assignment",
+    "Delete cancellation and visible failure inside confirmation",
+    "Logout protects direct links and browser Back",
+    "All UI deletions and deliberately empty collection survive restart",
+    "Corrupt read fails safely without overwriting and retry recovers"
+  ],
+  "runtimeErrors": []
+}
