@@ -1,21 +1,22 @@
-import { ScrollView, StyleSheet, View } from "react-native";
+import { Platform, ScrollView, StyleSheet, View } from "react-native";
+import { useSafeAreaInsets } from "react-native-safe-area-context";
+import { colors } from "../constants/theme";
 
-export default function AppScreen(props) {
-    const contentStyle = [styles.content, props.contentStyle];
-    if (props.centered === true) contentStyle.push(styles.centered);
-    return (
-        <View style={styles.container}>
-            <ScrollView
-                contentContainerStyle={contentStyle}
-                keyboardShouldPersistTaps="handled">
-                {props.children}
-            </ScrollView>
-        </View>
-    )
+export default function AppScreen({ children, centered = false, scroll = true, safeTop = true, contentStyle, style, refreshControl, ...props }) {
+  const insets = useSafeAreaInsets();
+  const contentStyles = [styles.content, { paddingTop: 24 + (safeTop ? insets.top : 0), paddingBottom: 32 + insets.bottom }, centered && styles.centered, contentStyle];
+  return (
+    <View style={[styles.container, style]}>
+      {scroll ? (
+        <ScrollView style={styles.scroll} contentContainerStyle={contentStyles} keyboardShouldPersistTaps="handled" keyboardDismissMode={Platform.OS === "ios" ? "interactive" : "on-drag"} automaticallyAdjustKeyboardInsets showsVerticalScrollIndicator={false} refreshControl={refreshControl} {...props}>
+          {children}
+        </ScrollView>
+      ) : <View style={contentStyles} {...props}>{children}</View>}
+    </View>
+  );
 }
-
 const styles = StyleSheet.create({
-    container: { flex: 1, backgroundColor: "#F5F3EE" },
-    content: { flexGrow: 1, padding: 20, paddingBottom: 40 },
-    centered: { justifyContent: "center", padding: 24 }
-})
+  container: { flex: 1, backgroundColor: colors.background }, scroll: { flex: 1 },
+  content: { flexGrow: 1, width: "100%", maxWidth: 720, alignSelf: "center", paddingHorizontal: 24 },
+  centered: { justifyContent: "center" },
+});
