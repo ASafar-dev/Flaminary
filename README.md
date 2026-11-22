@@ -59,20 +59,3 @@ Fifteen data/storage tests, lint, the JavaScript check, all 20 Expo doctor check
 
 The project uses `allowJs` with `checkJs` disabled. The TypeScript command checks parsing and module resolution, not full JavaScript type safety.
 
-## Limits
-
-Login is a mock account. Data stays in the current installation or browser; clearing app storage or uninstalling removes it. There is no backend, sync, recording, metronome, or audio grading. Completion is self-reported. Practice minutes are suggested durations, not measured time. Deleting a challenge removes its completion record. A list with one challenge repeats it on later days.
-
-## Sources and AI-use statement
-
-Four course ZIPs supplied by the student were used as references. Their patterns include `useState`, `useEffect`, callback props, array operations, Expo Router, Zod, and AsyncStorage. The original MIT notice remains in [LICENSE](LICENSE). See [source credits](docs/SOURCE_CREDITS.md).
-
-**AI-use statement:** I am the AI assistant used for this project. I reviewed the supplied examples, adapted and wrote application code in a similar JavaScript/JSX style, updated the interface and logo, wrote tests and documentation, ran checks, and prepared release files and synthetic narration. The code is AI-assisted. The student should review and understand it and disclose this assistance under the instructor's policy. I have not tested the app on the student's iPhone.
-
-## Release
-
-[GitHub repository](https://github.com/ASafar-dev/Flaminary). The repository is private; grant the instructor access before submission.
-
-The version 1.1.0 source ZIP is exported from tag **v1.1.0**. Its adjacent release record supplies the full commit SHA, ZIP checksum, and file comparison. Dependencies, .expo, generated builds, and .git are excluded. The v1.0.0 release remains a record of the earlier version. The `source-baseline-v1` tag and its manifest record the original source import, not the current file checksums.
-
-Use the [submission checklist](docs/SUBMISSION_CHECKLIST.md) before delivery. Verified commits establish signature verification, not independent student authorship.
