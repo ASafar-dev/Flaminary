@@ -1,68 +1,71 @@
-# How the Flaminary code follows the course examples
+# Code guide
 
-Flaminary extends the supplied MyTasks projects into a daily creativity challenge app for drummers. It keeps the course's plain JavaScript, JSX, React hooks, reusable components, props, Expo Router, Zod, and AsyncStorage. Application code was adapted and authored with AI assistance at the student's request; it is not an unchanged copy of the course app.
+Flaminary uses plain JavaScript and JSX with the patterns taught in the supplied MyTasks projects. Version 1.1.0 simplifies the interface and storage code and updates Expo to SDK 58.
 
-## Familiar patterns
+## Course patterns
 
-| Course example | Flaminary use |
+| Pattern | Use in Flaminary |
 | --- | --- |
-| `useState` for form and task values | Login input, editor fields, search, filters, confirmation dialog, and success feedback |
-| `map`, `filter`, and `find` | Render challenge cards, filter the archive, update/delete challenges, and find details by ID |
-| Reusable AppButton, AppScreen, and AppTextInput | Consistent buttons, scrollable screens, input styling, and field errors |
-| Props and callback functions | Cards open details; filters update parent state; dialog buttons confirm or cancel |
-| Expo Router stack and route parameters | Welcome/login flow, three main tabs, details by challenge ID, and one create/edit screen |
-| Zod `safeParse` | Validate login and editor forms, keep invalid values visible, and show understandable errors |
-| AsyncStorage with JSON data | Preserve challenges, completion dates, and daily assignments between app restarts |
+| `useState` | Form values, errors, search, filters, saved list, and mock session |
+| `useEffect` | Load saved data once and refresh the daily date |
+| `map`, `filter`, `find` | Render cards, filter the list, update/delete items, and look up details by ID |
+| Props and callbacks | Button actions, card selection, filter changes, and delete confirmation |
+| AppScreen, AppButton, AppTextInput | Reused screen, button, and field layouts |
+| Expo Router | Entry screens, three tabs, details, and one add/edit form |
+| Zod `safeParse` | Login, challenge forms, and stored-data validation |
+| AsyncStorage and JSON | Save challenges, completion dates, and daily assignments |
 
-## File map
+A small Context provider shares the parent state across Router screens. Details receive an ID and find the current item in this shared list. They do not rely on copied challenge text in URL parameters.
 
-| Path | Responsibility |
+## Files
+
+| Path | Purpose |
 | --- | --- |
-| `src/app/_layout.jsx` | Safe area, loading/retry feedback, and protected signed-in routes |
-| `src/app/index.jsx` and `login.jsx` | Welcome, mock credentials, validation, and entry to the app |
-| `src/app/(tabs)/_layout.jsx` | Today, Explore, and Progress navigation |
-| `src/app/(tabs)/today.jsx` | Stable daily prompt, kit illustration, and links to practice |
-| `src/app/(tabs)/explore.jsx` | Collection, combined text/category/status filters, and empty/no-results states |
-| `src/app/(tabs)/progress.jsx` | Completed collection and derived totals |
-| `src/app/challenge/[id].jsx` | Current item details, completion, editing, and confirmed deletion |
-| `src/app/editor.jsx` | One form for creating and editing challenges |
-| `src/components/` | Reusable UI, drum-kit illustration, cards, chips, dialog, banners, and back navigation |
-| `src/context/AppContext.jsx` | Parent-owned shared challenge state, session state, and application actions |
-| `src/data/challenges.js` | Twelve realistic local practice challenges |
-| `src/data/constants.js` | Mock credentials, allowed kit pieces, categories, difficulties, and time signatures |
-| `src/utils/validation.js` | Form schemas and stored-data validation |
-| `src/utils/storage.js` | Loading, serialization, daily assignment, and ordered persistence |
-| `tests/data-store.test.js` | Data validation, daily assignment, and storage regression tests |
+| `src/app/_layout.jsx` | Provider, loading/retry feedback, protected routes |
+| `src/app/index.jsx`, `login.jsx` | Welcome and Sign in |
+| `src/app/(tabs)/` | Today, Challenges, and Progress tabs |
+| `src/app/challenge/[id].jsx` | Details, completion, edit link, delete confirmation |
+| `src/app/editor.jsx` | Add/Edit challenge form |
+| `src/components/` | Shared controls and layouts |
+| `src/context/AppContext.jsx` | Shared list, mock session, and actions |
+| `src/data/challenges.js` | Twelve starter exercises |
+| `src/data/constants.js` | Mock credentials and allowed choices |
+| `src/data/legacyChallengeCopy.js` | Previous built-in wording for saved-data updates |
+| `src/utils/validation.js` | Zod schemas and field errors |
+| `src/utils/storage.js` | JSON loading/saving and daily assignment |
+| `tests/data-store.test.js` | Storage and validation regression tests |
 
-Reusable components and supporting code stay outside the Expo Router route directory.
+Components and helpers stay outside the route directory.
 
-## Shared state and persistence
+## Loading and saving
 
-The provider is the common parent for all screens. Details and Editor receive an ID and look up the current challenge, so an edit or completion change appears consistently across the app.
+The storage key is `FLAMINARY_STORE_V1`. Its object contains a version number, challenge list, and daily assignments.
 
-AsyncStorage stores a versioned object under `FLAMINARY_STORE_V1`. It contains challenges and date-to-challenge assignments. Mock data is seeded only when the key is missing. A deliberately saved empty collection remains empty after restart. Invalid saved data produces a visible retry screen and is not replaced with mock data.
+Missing storage gets the starter list. A saved empty list stays empty. Parsed saved data passes a Zod check before use. Failed reads show a retry screen and preserve the stored value.
 
-Storage operations run in order. Each change starts from the most recently saved state, waits for persistence to succeed, and then updates the UI. This extends the course's storage example to avoid writing initial defaults before hydration or losing a change to overlapping writes. Failed saves leave the visible collection unchanged and show a retryable error.
+A busy flag allows one read or save at a time. Save controls are disabled during the operation; a second overlapping action returns a message. There is no generic queued controller. A save writes the next list before replacing the shared state. A failed write leaves the last saved list visible.
 
-## Daily selection and progress
+Version 1.1.0 updates built-in wording only when its saved text still matches the earlier default. Custom challenges, edited text, and completion records are retained.
 
-The app uses the device's local calendar date. A saved daily assignment remains stable when another challenge is added or edited. A new day chooses another available challenge; the immediately previous assignment is excluded when alternatives exist. Deleting the assigned challenge selects a replacement. If no challenges remain, Today offers creation instead of trying to display a missing item.
+## Daily assignment and progress
 
-Completion is self-reported and can be undone. Progress totals are derived from the current collection. Suggested practice time is the sum of completed challenges' planned durations, not a stopwatch measurement. Deleting a challenge also removes its completion record.
+The date uses the device's local calendar. An assignment remains fixed during its date. The previous assignment is excluded when other challenges exist. Deleting the assigned item chooses a replacement. An empty list shows an Add action.
+
+Completion stores a date and supports undo. Counts and suggested minutes are calculated from current challenges. Removing an item also removes its completion record.
 
 ## Forms and session
 
-The editor validates title (3–70 characters), description (20–600), restrictions (10–300), at least one allowed kit piece, a whole-number tempo from 40–240 BPM, and a whole-number practice duration from 5–45 minutes. Type, difficulty, and time signature must be supported options.
+The challenge form validates title length 3–70, description 20–600, restrictions 10–300, at least one kit piece, whole-number tempo 40–240 BPM, and practice time 5–45 minutes. Type, difficulty, and time signature use fixed options.
 
-The demo email/password are checked against predefined credentials after Zod validation. Signed-in state lives only in memory. A cold restart or browser reload requires login again; saved practice data remains. Protected routes prevent Back or direct navigation from reopening the signed-in app after logout. This is a mock login for the assignment, not production authentication.
+Login validates input and checks the predefined email/password. Signed-in state is not persisted. Logout protects the main screens from direct links and Back navigation. This mock login is separate from an Expo account used to open Expo Go.
 
-## Official documentation
+## References
 
-- [Expo SDK 57 reference](https://docs.expo.dev/versions/v57.0.0/)
+- [Expo SDK 58](https://docs.expo.dev/versions/v58.0.0/)
 - [Expo Router navigation](https://docs.expo.dev/router/basics/navigation/)
 - [Protected routes](https://docs.expo.dev/router/advanced/protected/)
-- [AsyncStorage](https://docs.expo.dev/versions/v57.0.0/sdk/async-storage/)
+- [Expo AsyncStorage reference](https://docs.expo.dev/versions/v58.0.0/sdk/async-storage/)
 - [AsyncStorage usage](https://react-native-async-storage.github.io/2.0/Usage/)
 - [Zod basics](https://zod.dev/basics)
 
-The [source credits](SOURCE_CREDITS.md) distinguish supplied course material, adaptations, and newly authored code.
+See [source credits](SOURCE_CREDITS.md) for the course material and AI assistance.

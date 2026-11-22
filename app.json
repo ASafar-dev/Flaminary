@@ -2,15 +2,15 @@
   "expo": {
     "name": "Flaminary",
     "slug": "flaminary",
-    "version": "1.0.0",
+    "version": "1.1.0",
     "orientation": "portrait",
     "icon": "./assets/images/flaminary-icon.png",
     "scheme": "flaminary",
-    "userInterfaceStyle": "dark",
+    "userInterfaceStyle": "light",
     "ios": {},
     "android": {
       "adaptiveIcon": {
-        "backgroundColor": "#111610",
+        "backgroundColor": "#F5F3EE",
         "foregroundImage": "./assets/images/flaminary-icon.png"
       },
       "predictiveBackGestureEnabled": false
@@ -24,16 +24,15 @@
       [
         "expo-splash-screen",
         {
-          "backgroundColor": "#111610",
+          "backgroundColor": "#F5F3EE",
           "image": "./assets/images/flaminary-icon.png",
-          "imageWidth": 120
+          "imageWidth": 96
         }
       ],
       "expo-status-bar"
     ],
     "experiments": {
-      "typedRoutes": true,
-      "reactCompiler": true
+      "typedRoutes": true
     }
   }
 }

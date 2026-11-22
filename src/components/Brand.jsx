@@ -2,16 +2,73 @@ import { StyleSheet, Text, View } from "react-native";
 import { colors } from "../constants/theme";
 
 export default function Brand({ compact = false, style }) {
-  return (
-    <View accessibilityLabel="Flaminary" style={[styles.brand, style]}>
-      <View style={[styles.mark, compact && styles.compactMark]}><View style={styles.stickOne} /><View style={styles.stickTwo} /><View style={styles.hit} /></View>
-      <View><Text style={[styles.name, compact && styles.compactName]}>flaminary<Text style={styles.dot}>.</Text></Text>{!compact && <Text style={styles.tagline}>A LITTLE LIMIT. A NEW RHYTHM.</Text>}</View>
-    </View>
-  );
+    return (
+        <View
+            accessibilityLabel="Flaminary"
+            style={[styles.brand, compact && styles.compact, style]}
+        >
+            <View
+                accessible={false}
+                importantForAccessibility="no-hide-descendants"
+                style={styles.mark}
+            >
+                <View style={styles.drumBody} />
+                <View style={styles.drumHead} />
+                <View style={[styles.lug, styles.leftLug]} />
+                <View style={[styles.lug, styles.rightLug]} />
+                <View style={styles.stickOne} />
+                <View style={styles.stickTwo} />
+            </View>
+            <Text style={styles.name}>Flaminary</Text>
+        </View>
+    );
 }
 const styles = StyleSheet.create({
-  brand: { flexDirection: "row", alignItems: "center", gap: 11 }, mark: { width: 43, height: 43, borderRadius: 13, backgroundColor: colors.lime, overflow: "hidden" }, compactMark: { width: 35, height: 35, borderRadius: 11 },
-  stickOne: { position: "absolute", width: 4, height: 28, backgroundColor: colors.onLime, left: "38%", top: "16%", borderRadius: 4, transform: [{ rotate: "-28deg" }] },
-  stickTwo: { position: "absolute", width: 4, height: 22, backgroundColor: colors.onLime, left: "60%", top: "22%", borderRadius: 4, transform: [{ rotate: "29deg" }] }, hit: { position: "absolute", width: 4, height: 4, backgroundColor: colors.onLime, borderRadius: 3, left: "20%", top: "22%" },
-  name: { fontSize: 28, fontWeight: "800", color: colors.text, letterSpacing: -1.3, lineHeight: 32 }, compactName: { fontSize: 23, lineHeight: 28 }, dot: { color: colors.lime }, tagline: { fontSize: 8, letterSpacing: 1.4, color: colors.muted, fontWeight: "700", marginTop: 4 },
+    brand: { flexDirection: "row", alignItems: "center", gap: 10 },
+    compact: { gap: 8 },
+    mark: { width: 40, height: 40 },
+    drumBody: {
+        position: "absolute",
+        left: 6,
+        top: 20,
+        width: 28,
+        height: 13,
+        borderRadius: 3,
+        backgroundColor: colors.primary,
+    },
+    drumHead: {
+        position: "absolute",
+        left: 6,
+        top: 16,
+        width: 28,
+        height: 9,
+        borderRadius: 14,
+        backgroundColor: colors.surface,
+        borderWidth: 2,
+        borderColor: colors.primary,
+    },
+    lug: { position: "absolute", top: 25, width: 2, height: 6, backgroundColor: colors.surface },
+    leftLug: { left: 12 },
+    rightLug: { left: 26 },
+    stickOne: {
+        position: "absolute",
+        left: 6,
+        top: 10,
+        width: 18,
+        height: 2,
+        borderRadius: 2,
+        backgroundColor: colors.primary,
+        transform: [{ rotate: "25deg" }],
+    },
+    stickTwo: {
+        position: "absolute",
+        left: 17,
+        top: 7,
+        width: 18,
+        height: 2,
+        borderRadius: 2,
+        backgroundColor: colors.primary,
+        transform: [{ rotate: "25deg" }],
+    },
+    name: { fontSize: 22, fontWeight: "600", color: colors.text, lineHeight: 29 },
 });

@@ -1,75 +1,78 @@
 # Flaminary
 
-Flaminary is a daily creativity challenge app for drummers. Its name combines **flam**, a drum rudiment, with **imaginary**: a small restriction can lead to a new groove or fill.
+Flaminary gives drummers a daily fill or groove exercise. Each challenge lists its restrictions, kit pieces, tempo, time signature, and suggested practice time.
 
-Built with React Native, Expo SDK 57, Expo Router, Zod, and AsyncStorage, following the JavaScript and component patterns in the supplied MyTasks course projects. [How the code follows the course](docs/CODE_GUIDE.md).
+Version 1.1.0 uses Expo SDK 58 and a simpler light interface. The code follows the JavaScript, components, and state patterns in the supplied MyTasks ZIPs. See the [code guide](docs/CODE_GUIDE.md).
 
-## Run the app
+## Start the project
 
-Install Node.js 24 LTS and npm. From this project folder:
+Install Node.js 24 LTS and npm. Open a terminal in this folder:
 
 ```sh
 npm ci
-npx expo start
+npx expo start --clear --go
 ```
 
-Open the project with an Expo Go release compatible with SDK 57, or a compatible development build. Press `w` to open the web version. The web build also runs with `npx expo start --web`.
+For an iPhone:
+
+1. Update [Expo Go from the App Store](https://apps.apple.com/app/expo-go/id982107779). The current Expo Go release supports SDK 58; the older SDK 57 project requires its older compatible client.
+2. Connect the computer and iPhone to the same Wi-Fi network.
+3. Sign in to Expo CLI with `npx expo login`, then sign in to Expo Go with the same Expo account. This is separate from the app's mock login.
+4. Start the command above. Scan its new QR code with the iPhone Camera app, then open the Expo Go link.
+5. If an old project opens, remove its old Recent entry from Expo Go and scan the new terminal QR code again. Restarting with `--clear` clears the bundler cache.
+
+Press `w` in the terminal for the web version. See [Expo's start instructions](https://docs.expo.dev/get-started/start-developing/) for network and account setup.
 
 ## Mock login
 
 - Email: `student@example.com`
 - Password: `password2026`
 
-These public credentials are checked after Zod validation. Login is a local mock session, not a real account. Logout returns to the entry flow and protects signed-in screens. A cold restart or browser reload requires login again; practice data remains on the device.
+The Sign in screen includes a **Use demo account** button. Zod validates the fields, then the app compares them with the predefined credentials. Session state stays in memory. A restart or browser reload requires signing in again; saved challenges remain.
 
 ## Features
 
-- Seven screens: Welcome, Login, Today, Explore, Progress, Challenge Details, and Challenge Editor.
-- A daily challenge with a stable assignment for the device's local calendar date.
-- Twelve realistic drum challenges covering fills, grooves, creative restrictions, kit pieces, difficulty, tempo, time signature, and practice duration.
-- Combined archive search and category/status filters, with separate empty and no-results states.
-- Create, edit, and delete any challenge. Deletion requires confirmation.
-- Mark challenges complete or unfinished, view completed ideas, and see derived totals.
-- Zod validation with field errors for login and challenge entry.
-- AsyncStorage persistence of the collection, completion dates, and daily assignments, including a deliberately empty collection.
-- Visible loading, load-retry, and save-failure feedback. Saved data is validated before use, and writes run in order.
-- Reusable native components, dark styling, original geometric branding, and a kit illustration highlighting the allowed pieces.
+- Seven screens: Welcome, Sign in, Today, Challenges, My progress, Challenge details, and Add/Edit challenge.
+- Twelve starter exercises and a saved daily assignment based on the device's local date.
+- Search by challenge text or kit pieces, combined with type and status filters.
+- Add and edit exercises with field validation.
+- Delete confirmation with a Cancel action.
+- Mark complete or unfinished; view completed exercises and counts.
+- AsyncStorage saves challenges, completion dates, and daily assignments. An emptied list stays empty after restart.
+- Loading, retry, success, validation, and storage-failure feedback.
 
-The [screen-flow diagram](docs/SCREEN_FLOW.txt) describes the navigation. The [proposal](docs/PROPOSAL.md) records the app's purpose and scope; instructor approval is not recorded by this repository.
+The [screen flow](docs/SCREEN_FLOW.txt) lists the routes. The [proposal](docs/PROPOSAL.md) records the purpose and scope. Instructor approval is not recorded here.
 
-## Verification
-
-Run the project checks:
+## Checks
 
 ```sh
-node --test tests/data-store.test.js
-npx expo lint
-npx tsc --noEmit
+npm test
+npm run lint
+npm run typecheck
+npx expo-doctor
 npx expo export --platform web
+npx expo export --platform ios
+npx expo export --platform android
 ```
 
-See [verification results](docs/VERIFICATION.md) for completed checks, runtime coverage, screenshots, and media references. Development and command-line checks use Windows. Native Expo Go, Android/iOS, and development-build testing must be reported separately; a web build does not establish native runtime coverage.
+Fifteen data/storage tests, lint, the JavaScript check, all 20 Expo doctor checks, and 10 browser workflows passed. Web, iOS, and Android bundles passed too. The Expo Go iOS manifest reports SDK 58.0.0 and app version 1.1.0. See [VERIFICATION.md](docs/VERIFICATION.md). I have not run this version on a physical iPhone.
 
-Lint, the JSX check, 11 data/storage tests, 10 browser workflows, and web and Android production bundles passed. [Main-screen screenshots](docs/VERIFICATION.md#screenshots-and-narrated-recording) and a narrated MP4 accompany the release. The MP4 uses Windows Hazel synthetic narration and shows real browser interactions.
+The project uses `allowJs` with `checkJs` disabled. The TypeScript command checks parsing and module resolution, not full JavaScript type safety.
 
-The JavaScript project uses TypeScript's `allowJs` configuration for parsing/module checks; `checkJs` is disabled, so the command is not a claim of full static type safety.
+## Limits
 
-## Limitations
-
-The app uses mock login and local storage only. There is no backend, account sync, recording, audio analysis, metronome, or automatic performance grading. Completion is self-reported. Suggested practice minutes are planned durations of completed challenges, not measured time. Deleting a challenge also removes its completion record. With only one challenge available, a new day may repeat it.
-
-Practice data belongs to the current app installation/browser. Clearing its storage or uninstalling removes that data. Instructor access to the private GitHub repository must be granted before submission.
+Login is a mock account. Data stays in the current installation or browser; clearing app storage or uninstalling removes it. There is no backend, sync, recording, metronome, or audio grading. Completion is self-reported. Practice minutes are suggested durations, not measured time. Deleting a challenge removes its completion record. A list with one challenge repeats it on later days.
 
 ## Sources and AI-use statement
 
-The student supplied four MyTasks course archives. Flaminary adapts their hook, component, callback, Router, Zod, and AsyncStorage patterns. The original course project's MIT notice is retained in [LICENSE](LICENSE), and the [source credits](docs/SOURCE_CREDITS.md) identify the supplied material and adaptations.
+Four course ZIPs supplied by the student were used as references. Their patterns include `useState`, `useEffect`, callback props, array operations, Expo Router, Zod, and AsyncStorage. The original MIT notice remains in [LICENSE](LICENSE). See [source credits](docs/SOURCE_CREDITS.md).
 
-**AI-use statement:** At the student's request, an AI coding assistant inspected the course examples, adapted and authored application code in a similar JavaScript/JSX style, created UI and geometric artwork, drafted documentation, ran verification commands, and prepared Git and release materials. The completed code is AI-assisted, not an unchanged human-authored course submission. The student should review, understand, test, and disclose this assistance according to the instructor's policy. No instructor approval or exemption from that policy is implied.
+**AI-use statement:** I am the AI assistant used for this project. I reviewed the supplied examples, adapted and wrote application code in a similar JavaScript/JSX style, updated the interface and logo, wrote tests and documentation, ran checks, and prepared release files and synthetic narration. The code is AI-assisted. The student should review and understand it and disclose this assistance under the instructor's policy. I have not tested the app on the student's iPhone.
 
-## Submission version
+## Release
 
-The final release is identified by Git tag **v1.0.0**. The source ZIP must be exported from that tag, excluding node_modules, .expo, build output, and .git. The adjacent release record identifies the tag's full commit SHA and the ZIP checksum. This avoids embedding a commit's own hash inside the content it identifies.
+[GitHub repository](https://github.com/ASafar-dev/Flaminary). The repository is private; grant the instructor access before submission.
 
-[GitHub repository](https://github.com/ASafar-dev/Flaminary) · [Submission checklist](docs/SUBMISSION_CHECKLIST.md)
+The version 1.1.0 source ZIP is exported from tag **v1.1.0**. Its adjacent release record supplies the full commit SHA, ZIP checksum, and file comparison. Dependencies, .expo, generated builds, and .git are excluded. The v1.0.0 release remains a record of the earlier version. The `source-baseline-v1` tag and its manifest record the original source import, not the current file checksums.
 
-The earlier `source-baseline-v1` tag preserves the original import. Its checksum manifest describes that historical baseline; adapted files in the completed app are expected to differ. Commit history records the actual work dates and does not imply earlier student development. A Verified badge verifies a signature, not independent authorship.
+Use the [submission checklist](docs/SUBMISSION_CHECKLIST.md) before delivery. Verified commits establish signature verification, not independent student authorship.

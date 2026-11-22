@@ -15,8 +15,8 @@ function Navigation() {
         return (
             <AppScreen centered>
                 <Brand />
-                <ActivityIndicator color="#D9FC80" size="large" style={styles.loader} />
-                <Text style={styles.loadingText}>Opening your practice library…</Text>
+                <ActivityIndicator color="#285548" size="large" style={styles.loader} />
+                <Text style={styles.loadingText}>Loading my challenges...</Text>
             </AppScreen>
         );
     }
@@ -25,8 +25,13 @@ function Navigation() {
         return (
             <AppScreen centered>
                 <Brand />
-                <EmptyState icon="cloud-offline-outline" title="Your library needs a moment."
-                    message={loadError} actionText="Try loading again" onAction={retryLoad} />
+                <EmptyState
+                    icon="cloud-offline-outline"
+                    title="My saved challenges did not load."
+                    message={loadError}
+                    actionText="Try loading again"
+                    onAction={retryLoad}
+                />
             </AppScreen>
         );
     }
@@ -50,7 +55,7 @@ export default function RootLayout() {
     return (
         <SafeAreaProvider>
             <AppProvider>
-                <StatusBar style="light" />
+                <StatusBar style="dark" />
                 <Navigation />
             </AppProvider>
         </SafeAreaProvider>
@@ -58,7 +63,7 @@ export default function RootLayout() {
 }
 
 const styles = StyleSheet.create({
-    background: { backgroundColor: "#111610" },
+    background: { backgroundColor: "#F5F3EE" },
     loader: { marginTop: 40, marginBottom: 20 },
-    loadingText: { color: "#A3AD9C", textAlign: "center", fontSize: 15 }
+    loadingText: { color: "#61736B", textAlign: "center", fontSize: 15 },
 });
