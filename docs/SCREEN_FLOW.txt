@@ -1,51 +1,55 @@
-FLAMINARY — SEVEN-SCREEN FLOW
+FLAMINARY SCREEN FLOW
 
-Welcome (1) /
+Welcome (1) /  [My drum practice]
     |
+    | Start practising
     v
-Login (2) /login -- invalid input / wrong credentials --> errors on Login
+Sign in (2) /login
+    |-- invalid input / wrong credentials --> show errors
     |
     | valid mock credentials
     v
-+---------------------------------------------------------------+
-| Main tabs                                                     |
-|                                                               |
-| Today (3) <-------> Explore (4) <-------> Progress (5)            |
-| /today             /explore             /progress              |
-| Daily prompt       Collection           Completed challenges    |
-+---------------------------------------------------------------+
++------------------------------------------------------------------+
+| Tabs                                                             |
+| Today (3) <-----> Challenges (4) <-----> Progress (5)                |
+| /today           /explore             /progress                    |
+| Today's          Challenges          My progress                   |
+| challenge                                                        |
++------------------------------------------------------------------+
     |                    |                    |
     +--------------------+--------------------+
                          |
+                         | Open a challenge
                          v
-               Challenge Details (6)
-               /challenge/[id]
+                 Challenge details (6)
+                 /challenge/[id]
                     |             |
-           mark complete       edit challenge
-           or unfinished          |
+             Mark complete       Edit challenge
+             / unfinished         |
                     |             v
-             update Progress   Challenge Editor (7)
+             Update Progress   Add/Edit challenge (7)
                                /editor?id=...
                                       |
-                               validate, then save
+                                Save changes
                                       |
-                                return to Details
+                                Back to details
 
-Explore -- Create --> Challenge Editor (7) /editor
-New challenge -- valid Save --> its Challenge Details
-Editor -- invalid Save --> field errors; keep the form's values
-Editor -- Cancel / Back --> originating screen without saving
-Details -- Back --> originating Today, Explore, or Progress screen
-Details -- Delete --> confirmation --> originating screen
-                       Cancel --> stay on Details
-Progress -- Log out --> entry flow; signed-in routes become inaccessible
+Challenges -- Add --> Add challenge /editor
+Add -- Save challenge --> its details
+Invalid Save --> field errors; retain entered values
+Editor -- Cancel / Back --> previous screen without saving
+Details -- Back --> previous tab
+Details -- Delete challenge --> confirmation
+Confirmation -- Cancel --> keep item
+Confirmation -- Delete --> remove item and completion record
+My progress -- Log out --> entry screens; protect main routes
 
-Empty collection --> Create a challenge
-No search/filter results --> Clear search and filters
-Missing/deleted detail ID --> Explore challenges
-Initial storage read --> actual loading feedback
-Failed storage load --> visible error and Try loading again
-Failed save --> visible error; keep the last saved library
+Empty list --> Add a challenge
+No matches --> Clear search and filters
+Missing detail ID --> Open challenges
+Storage loading --> loading indicator
+Failed read --> retry screen; preserve saved data
+Failed save --> error; keep last saved list
 
-Mock session is in memory. A cold restart returns to entry/login while local
-challenge data and completion records remain in AsyncStorage.
+A reload requires the mock login again. Challenge and completion data remain
+in AsyncStorage. Expo account sign-in is separate from the app's mock login.

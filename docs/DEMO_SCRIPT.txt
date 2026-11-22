@@ -1,28 +1,28 @@
-FLAMINARY DEMONSTRATION NARRATION
-Voice: Microsoft Hazel Desktop - English (Great Britain); rate: 0. AI-assisted script and synthetic narration.
-Platform shown: Expo web at mobile width. Native testing is not claimed.
+FLAMINARY VERSION 1.1.0 NARRATION
+Microsoft Hazel Desktop, English Great Britain, rate 0. AI-assisted script and synthetic voice.
+The recording shows Expo web at phone width. No physical iPhone test is claimed.
 
-01. Welcome and purpose (38.543 seconds)
-Flaminary is a daily creativity app for beginner and intermediate drummers. The idea is simple: a small restriction can help you discover a different groove or fill. Instead of wondering what to practise, you get one focused prompt, with allowed kit pieces, a tempo, a time signature, and a suggested duration. The name combines the drum rudiment flam with imaginary. This demonstration uses the Expo web app at a mobile screen size. The welcome screen introduces that purpose and leads to the mock login.
+01. Welcome (39.024 seconds)
+I’m showing Flaminary, a drum practice app based on the MyTasks class examples. The welcome screen lists daily exercises and personal challenges. Each exercise includes kit pieces, restrictions, tempo, time signature, and suggested duration. I’m running the web app at phone width for this recording. I select Start practising to open Sign in. Saved practice data stays on the current device or browser. The interface uses plain fields, white cards, and green buttons.
 
-02. Login and validation (38.263 seconds)
-The login screen uses the same validation approach as the class examples. Zod checks the email format and password length before the app compares the entered values with its predefined credentials. Invalid input stays in the form with readable feedback. The demo email is student at example dot com. The password is the word password, followed by the digits two, zero, two, six. A valid login opens the main screens. The signed-in session is local, and passwords are not saved with the challenge data.
+02. Sign in (32.621 seconds)
+I enter an incomplete email address and a short password, then select Sign in. The form keeps my input and shows field errors. Zod checks the email format and password length, then the app checks its predefined credentials. I use the demo button to fill student at example dot com and password two zero two six. This is the app’s mock login. The Expo account used to open Expo Go is a separate account.
 
-03. Daily prompt and details (42.806 seconds)
-Today is the starting point for a practice session. Its featured card shows the assigned challenge, difficulty, musical restriction, tempo, time signature, and suggested minutes. The prompt stays stable during the same local calendar day. Opening it reveals the full idea, a highlighted drum kit, and three practice steps. The kit illustration makes the allowed instruments easy to identify. These limits are an invitation to experiment, and the player chooses what to play inside them. The app supplies the prompt and leaves the musical decisions to the drummer.
+03. Today and details (35.740 seconds)
+Today shows one saved assignment for the current local date. I read its title, restrictions, kit pieces, tempo, time signature, and suggested minutes. I open the challenge for its description and practice instructions. Completion records my confirmation after practice; the app does not listen to the drums or grade the result. The challenge stays selected during the day. A later date selects a different exercise when the list contains more than one option.
 
-04. Archive search and filters (37.864 seconds)
-Explore is the challenge archive. Search checks titles, descriptions, restrictions, difficulty, and kit pieces. Category filters narrow it to grooves or fills. Practice filters show ideas to try, completed challenges, or custom ideas. These controls work together, and the visible result count updates. No matches produces a clear message with a reset action. Every card opens its current details, and the archive also offers challenge creation.
+04. Challenges and filters (35.336 seconds)
+I open Challenges to view the saved list. I enter a search term, then choose a type and a status. The list matches these choices together. Search covers titles, descriptions, restrictions, difficulty, and kit pieces. I check the result count and open a matching card for details. I also try a search with no results. Its message offers an action to reset the search and filters. Resetting restores the full list.
 
-05. Create and editor validation (42.786 seconds)
-The editor handles both adding and editing. It asks for a title, a description, a type, a difficulty, allowed kit pieces, and a creative restriction. Tempo, time signature, and suggested duration keep the prompt practical. An incomplete submission shows field errors and preserves the entered values. At least one kit piece is required. Tempo must be a whole number between forty and two hundred forty, and duration is five to forty-five minutes. After valid input is saved, the new challenge opens in Details and joins the shared collection.
+05. Add challenge (40.923 seconds)
+I select Add to create an exercise. The form uses plain fields and callback buttons. I try saving before the required details are complete, and read the errors. I enter a title, description, type, difficulty, kit pieces, and restrictions. I choose tempo, practice time, and time signature. At least one kit piece is required. Tempo must be a whole number from forty to two hundred forty, and duration is five to forty-five minutes. Saving valid values opens the new challenge.
 
-06. Edit completion and progress (38.693 seconds)
-Editing an existing challenge updates that same item. There is no separate copy to get out of sync. Cancelling the form leaves the saved version unchanged. The completion action records a self-reported finish date, and it can be undone. Progress lists completed challenges and derives its counts from the collection. It also shows the number of custom ideas and the suggested minutes attached to completed challenges. Those minutes describe planned practice duration; they are not a measurement from a running timer.
+06. Edit and progress (37.264 seconds)
+I open Edit challenge and change the title or tempo. Save changes updates the same item, so its list card and details show the new values. Cancel leaves the saved version alone. I mark the exercise complete and open My progress. The page lists completed exercises, their count, suggested minutes, and my custom challenge count. Minutes are the sum of suggested durations, not a stopwatch reading. I test Mark unfinished to remove the completion record.
 
-07. Persistence and confirmed deletion (38.243 seconds)
-Async Storage keeps challenges, completion records, and daily assignments between restarts. Reloading requires the mock login again, while practice data remains. Saved empty collections stay empty, too. Loading and saving have visible feedback, and failed reads preserve the saved library. Deletion is deliberate: the dialog offers cancellation and confirmation. Cancelling keeps the item. Confirming removes it and its completion record, with the change reflected throughout the app.
+07. Reload and deletion (38.034 seconds)
+I reload and sign in again. The new challenge and its saved changes remain. Session state resets on reload, while Async Storage keeps the practice list and completion dates. I open Delete challenge, then select Cancel to keep the item. I open the confirmation again and confirm deletion. The item disappears and its progress record is removed. An empty saved list stays empty after restart. Failed storage operations show an error and preserve the last saved data.
 
-08. Logout credits and testing limits (35.879 seconds)
-Logging out removes access to signed-in screens, including back navigation. Flaminary uses React Native, Expo Router, Zod, and local storage, adapting components, callbacks, hooks, and array operations from the class projects. Application code, documentation, and this synthetic narration were prepared with AI assistance, as disclosed in the README. This demonstration shows Expo web at mobile width; native device testing is not claimed.
+08. Logout and references (39.758 seconds)
+I log out and check the entry screen. Protected routes stop the main pages reopening through Back or a direct link. I used four MyTasks ZIPs as references for hooks, arrays, props, navigation, validation, and storage. I wrote and adapted the app with AI assistance, as disclosed in the README. This narration is synthetic. Version one point one targets Expo SDK fifty-eight. This recording shows the web app at phone width. A physical iPhone test is not included.
 

@@ -1,41 +1,32 @@
-# Source credits and adaptations
+# Source credits
 
-Updated November 21, 2026. Flaminary adapts the supplied course projects and includes newly authored AI-assisted application code. It is no longer an unchanged MyTasks copy.
+Updated November 22, 2026, for version 1.1.0.
 
-## Course material supplied by the student
+## Supplied course ZIPs
 
-| Archive | Patterns used |
+| Archive | Reference material |
 | --- | --- |
-| My Tasks - Local Storage - GET and POST - Image Picker.zip | Original imported baseline; reusable components, Router, mock login, Zod, JSON storage, collection operations |
-| MyTasks - components - navigation - validation.zip | Component/prop organization, navigation, and validation examples |
-| MyTasks - Completed.zip | Adding, filtering, deleting, and toggling completion with React state and array helpers |
-| Sessions 1 2 3.zip | Introductory JSX, components, and form examples |
+| My Tasks - Local Storage - GET and POST - Image Picker.zip | Original import, reusable controls, Router, mock login, Zod, JSON storage, list operations |
+| MyTasks - components - navigation - validation.zip | Components, props, navigation, and validation |
+| MyTasks - Completed.zip | Adding, filtering, deleting, and completion using React state |
+| Sessions 1 2 3.zip | Introductory JSX, components, and forms |
 
-The original local-storage archive was imported from its `MyTasks/` folder. Its SHA-256 is `cf82cf8c27bed22d7da403954bceba1262f38ab2310db482fffd31ada3cece46`.
+The original local-storage archive came from its `MyTasks/` folder. Its SHA-256 is `cf82cf8c27bed22d7da403954bceba1262f38ab2310db482fffd31ada3cece46`.
 
-The [baseline manifest](../provenance/course-source-manifest.json) records the original imported bytes and omitted entries. The historical tag `source-baseline-v1` preserves that import. Current application files were intentionally adapted and are not expected to match its checksums. The original generic course README is retained at [COURSE_README.md](COURSE_README.md) as a source record, not current setup guidance.
+The [source manifest](../provenance/course-source-manifest.json) and historical `source-baseline-v1` tag record the imported files. Current adapted files are expected to differ. [COURSE_README.md](COURSE_README.md) preserves the original generic README as a source record.
 
-The course archive's MIT notice naming 650 Industries/Expo is preserved in the root [LICENSE](../LICENSE). Classroom additions are credited to the student-supplied course sources; the archive alone does not establish their original author or whether they were written with AI. No course Git history is relabelled as the student's own work.
+The original MIT notice naming 650 Industries/Expo remains in [LICENSE](../LICENSE). Classroom additions are credited to the supplied course archives. Their original authorship and AI-use history were not independently established. Course Git history is not presented as the student's own development history.
 
-## Adapted and newly authored application code
+## Adaptations
 
-The implementation keeps plain JavaScript/JSX, `useState`, `useEffect`, array `map`/`filter`/`find`, callback props, reusable components, Expo Router, Zod, and AsyncStorage. The [code guide](CODE_GUIDE.md) maps these choices to the course examples.
+The app retains the course's JavaScript/JSX, state hooks, callback props, array operations, reusable components, Expo Router, Zod, and AsyncStorage patterns. A small shared Context supplies state across screens. The [code guide](CODE_GUIDE.md) lists the files and patterns.
 
-New AI-assisted work includes the drum challenge model and mock content, seven-screen product flow, daily assignment rules, shared state, ordered safe storage, stronger validation, completion tracking, editing and confirmation, protected navigation, feedback states, responsive styling, and regression tests. This work should not be represented as unmodified code written by the course author.
+AI-assisted additions include challenge data, daily assignments, editing, completion tracking, protected navigation, validated storage, save-error handling, tests, and release materials. Version 1.1.0 uses a plain light layout and a single-save busy flag. It is adapted code, not an unchanged copy of code from another author.
 
-The Flaminary mark uses original simple geometric shapes. The drum kit is drawn with native views and text; it does not depend on a downloaded photograph or a generated illustration. Any retained unused Expo/course starter assets remain subject to their original notices. Icons use the installed [React Native Vector Icons Ionicons package](https://github.com/oblador/react-native-vector-icons).
+The logo and app icon use simple shapes drawn for Flaminary. Retained Expo/course assets keep their original notices. Installed icons come from [React Native Vector Icons](https://github.com/oblador/react-native-vector-icons).
 
-## Frameworks and dependencies
+Main dependency sources are [Expo](https://github.com/expo/expo), [React Native](https://github.com/facebook/react-native), [AsyncStorage](https://github.com/react-native-async-storage/async-storage), and [Zod](https://github.com/colinhacks/zod). Check each installed package's license notice for its terms.
 
-Consult the installed packages' own license notices for applicable terms. Main upstream projects:
+## AI-use statement
 
-- [Expo](https://github.com/expo/expo)
-- [React Native](https://github.com/facebook/react-native)
-- [AsyncStorage](https://github.com/react-native-async-storage/async-storage)
-- [Zod](https://github.com/colinhacks/zod)
-
-No backend service or third-party challenge feed is used by this version.
-
-## AI disclosure
-
-An AI coding assistant authored and adapted application code at the student's request, using the supplied course patterns; it also helped with source review, design, tests, artwork, documentation, verification commands, and release preparation. The student remains responsible for understanding and reviewing the code and meeting the instructor's independent-work and AI-use rules. The repository records actual changes and signatures, not proof of independent student authorship.
+I am the AI assistant used for this project. I inspected the ZIPs, adapted and wrote application code, revised the layout and logo, wrote tests and documentation, ran checks, and prepared release files and synthetic narration. The student supplied the requirements and course material. These tasks do not establish independent student authorship or instructor approval. The student should review the code and disclose the assistance under the course policy.
