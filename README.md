@@ -2,7 +2,7 @@
 
 Flaminary gives drummers a daily fill or groove exercise. Each challenge lists its restrictions, kit pieces, tempo, time signature, and suggested practice time.
 
-Version 1.1.0 uses Expo SDK 58 and a simpler light interface. The code follows the JavaScript, components, and state patterns in the supplied MyTasks ZIPs. See the [code guide](docs/CODE_GUIDE.md).
+Version 1.1.1 uses Expo SDK 58 with blue buttons, cool grey backgrounds, and dark grey text. The code follows the JavaScript, components, and state patterns in the supplied MyTasks ZIPs. See the [code guide](docs/CODE_GUIDE.md).
 
 ## Start the project
 
@@ -55,7 +55,7 @@ npx expo export --platform ios
 npx expo export --platform android
 ```
 
-Fifteen data/storage tests, lint, the JavaScript check, all 20 Expo doctor checks, and 10 browser workflows passed. Web, iOS, and Android bundles passed too. The Expo Go iOS manifest reports SDK 58.0.0 and app version 1.1.0. See [VERIFICATION.md](docs/VERIFICATION.md). I have not run this version on a physical iPhone.
+Fifteen data/storage tests, lint, the JavaScript check, all 20 Expo doctor checks, and 10 browser workflows passed. Web, iOS, and Android bundles passed too. The Expo Go iOS manifest reports SDK 58.0.0 and app version 1.1.1. See [VERIFICATION.md](docs/VERIFICATION.md). I have not run this version on a physical iPhone.
 
 The project uses `allowJs` with `checkJs` disabled. The TypeScript command checks parsing and module resolution, not full JavaScript type safety.
 

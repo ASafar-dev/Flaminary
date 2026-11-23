@@ -9,6 +9,7 @@ import ChallengeCard from "../../components/ChallengeCard";
 import EmptyState from "../../components/EmptyState";
 import FeedbackBanner from "../../components/FeedbackBanner";
 import FilterChips from "../../components/FilterChips";
+import { colors } from "../../constants/theme";
 import { useApp } from "../../context/AppContext.jsx";
 
 export default function ExploreScreen() {
@@ -154,10 +155,10 @@ const styles = StyleSheet.create({
         gap: 16,
         marginBottom: 24,
     },
-    heading: { flex: 1, color: "#203B35", fontSize: 26, fontWeight: "700" },
+    heading: { flex: 1, color: colors.text, fontSize: 26, fontWeight: "700" },
     addAction: { width: 88 },
     filterGroup: { marginTop: 8, marginBottom: 12 },
-    label: { color: "#203B35", fontSize: 16, fontWeight: "600", marginBottom: 8 },
+    label: { color: colors.text, fontSize: 16, fontWeight: "600", marginBottom: 8 },
     resultsRow: {
         flexDirection: "row",
         alignItems: "center",
@@ -166,7 +167,7 @@ const styles = StyleSheet.create({
         marginTop: 8,
         marginBottom: 16,
     },
-    resultCount: { color: "#61736B", fontSize: 14, flex: 1 },
+    resultCount: { color: colors.muted, fontSize: 14, flex: 1 },
     clearAction: { minHeight: 44, justifyContent: "center", paddingLeft: 8 },
-    clearText: { color: "#285548", fontSize: 14, fontWeight: "600" },
+    clearText: { color: colors.primary, fontSize: 14, fontWeight: "600" },
 });

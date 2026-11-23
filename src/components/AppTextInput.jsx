@@ -18,7 +18,7 @@ export default function AppTextInput({
             {label ? <Text style={styles.label}>{label}</Text> : null}
             <TextInput
                 placeholderTextColor={colors.subtle}
-                selectionColor={colors.lime}
+                selectionColor={colors.primary}
                 underlineColorAndroid="transparent"
                 accessibilityLabel={label || props.accessibilityLabel || props.placeholder}
                 multiline={multiline}
@@ -64,7 +64,7 @@ const styles = StyleSheet.create({
         lineHeight: 24,
     },
     multiline: { minHeight: 112 },
-    focused: { borderColor: colors.lime },
+    focused: { borderColor: colors.primary },
     invalid: { borderColor: colors.error },
     error: { ...typography.small, color: colors.error, marginTop: 7 },
 });

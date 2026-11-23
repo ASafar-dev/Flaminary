@@ -267,7 +267,7 @@ const styles = StyleSheet.create({
         borderColor: colors.border,
         backgroundColor: colors.surface,
     },
-    kitSelected: { backgroundColor: "#E6EEE7", borderColor: colors.primary },
+    kitSelected: { backgroundColor: colors.surfaceRaised, borderColor: colors.primary },
     kitText: { fontSize: 14, color: colors.text },
     kitTextSelected: { color: colors.primary, fontWeight: "600" },
     numbers: { flexDirection: "row", gap: 16 },

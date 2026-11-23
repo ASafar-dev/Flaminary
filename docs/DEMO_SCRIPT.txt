@@ -1,28 +1,81 @@
-FLAMINARY VERSION 1.1.0 NARRATION
-Microsoft Hazel Desktop, English Great Britain, rate 0. AI-assisted script and synthetic voice.
-The recording shows Expo web at phone width. No physical iPhone test is claimed.
+FLAMINARY 1.1.1: MY OWN-VOICE RECORDING GUIDE
 
-01. Welcome (39.024 seconds)
-I’m showing Flaminary, a drum practice app based on the MyTasks class examples. The welcome screen lists daily exercises and personal challenges. Each exercise includes kit pieces, restrictions, tempo, time signature, and suggested duration. I’m running the web app at phone width for this recording. I select Start practising to open Sign in. Saved practice data stays on the current device or browser. The interface uses plain fields, white cards, and green buttons.
+Record a new demonstration of version 1.1.1 with your own voice. Narrate live or add your voice to your new screen recording afterward. Read only the Voice paragraphs. The Actions lines are instructions.
 
-02. Sign in (32.621 seconds)
-I enter an incomplete email address and a short password, then select Sign in. The form keeps my input and shows field errors. Zod checks the email format and password length, then the app checks its predefined credentials. I use the demo button to fill student at example dot com and password two zero two six. This is the app’s mock login. The Expo account used to open Expo Go is a separate account.
+Aim for about 120 words per minute and a total length of about five minutes. The times below are approximate. Pause while you click, type or scroll. Record the voice one section at a time.
 
-03. Today and details (35.740 seconds)
-Today shows one saved assignment for the current local date. I read its title, restrictions, kit pieces, tempo, time signature, and suggested minutes. I open the challenge for its description and practice instructions. Completion records my confirmation after practice; the app does not listen to the drums or grade the result. The challenge stays selected during the day. A later date selects a different exercise when the list contains more than one option.
+Before recording:
+1. Open the app at Welcome and have the demo account ready: student@example.com / password2026. These are the app's mock credentials, separate from an Expo account.
+2. Prepare the sample challenge text at the end of this guide for pasting into the form.
+3. Choose an accurate platform description. The Voice paragraphs describe the web app at phone width. If you record the app running in Expo Go on your iPhone, replace both web-platform sentences with: "I am demonstrating Flaminary in Expo Go on my iPhone." Describe only the platform you have used.
+4. Check your microphone audio. Export your finished recording as MP4, for example Flaminary-v1.1.1-my-demo.mp4.
 
-04. Challenges and filters (35.336 seconds)
-I open Challenges to view the saved list. I enter a search term, then choose a type and a status. The list matches these choices together. Search covers titles, descriptions, restrictions, difficulty, and kit pieces. I check the result count and open a matching card for details. I also try a search with no results. Its message offers an action to reset the search and filters. Resetting restores the full list.
+0:00 to 0:35. Welcome
 
-05. Add challenge (40.923 seconds)
-I select Add to create an exercise. The form uses plain fields and callback buttons. I try saving before the required details are complete, and read the errors. I enter a title, description, type, difficulty, kit pieces, and restrictions. I choose tempo, practice time, and time signature. At least one kit piece is required. Tempo must be a whole number from forty to two hundred forty, and duration is five to forty-five minutes. Saving valid values opens the new challenge.
+Actions: Show the welcome page and the blue buttons. Select Start practising to open Sign in.
 
-06. Edit and progress (37.264 seconds)
-I open Edit challenge and change the title or tempo. Save changes updates the same item, so its list card and details show the new values. Cancel leaves the saved version alone. I mark the exercise complete and open My progress. The page lists completed exercises, their count, suggested minutes, and my custom challenge count. Minutes are the sum of suggested durations, not a stopwatch reading. I test Mark unfinished to remove the completion record.
+Voice:
+I am demonstrating Flaminary, a drum practice app based on the MyTasks class examples. It gives drummers a daily exercise and a place to save their own challenges. Each exercise lists kit pieces, restrictions, tempo, time signature and suggested practice time. I am showing the web version at phone width. My saved practice stays on this device through local storage. I select Start practising to open Sign in.
 
-07. Reload and deletion (38.034 seconds)
-I reload and sign in again. The new challenge and its saved changes remain. Session state resets on reload, while Async Storage keeps the practice list and completion dates. I open Delete challenge, then select Cancel to keep the item. I open the confirmation again and confirm deletion. The item disappears and its progress record is removed. An empty saved list stays empty after restart. Failed storage operations show an error and preserve the last saved data.
+0:35 to 1:10. Sign in
 
-08. Logout and references (39.758 seconds)
-I log out and check the entry screen. Protected routes stop the main pages reopening through Back or a direct link. I used four MyTasks ZIPs as references for hooks, arrays, props, navigation, validation, and storage. I wrote and adapted the app with AI assistance, as disclosed in the README. This narration is synthetic. Version one point one targets Expo SDK fifty-eight. This recording shows the web app at phone width. A physical iPhone test is not included.
+Actions: Submit an incomplete email and a short password. Then try student@example.com with an incorrect password. Select Use demo account, then Sign in.
 
+Voice:
+I enter an incomplete email address and a short password, then select Sign in. The form shows field errors from Zod. An incorrect password produces a separate login error. I select Use demo account to fill student at example dot com and password two zero two six. This is a predefined mock account. Signing in opens Today.
+
+1:10 to 1:45. Today and details
+
+Actions: Show the daily challenge. Select Open challenge and scroll through its details and practice steps. Go back, then open Challenges.
+
+Voice:
+Today shows one saved challenge for the current local date. I read its restrictions, kit pieces, tempo and suggested time. I open the challenge for its description and practice steps. Completion is self-reported after practice. The daily assignment stays the same unless I delete it. A later date selects a different exercise when more than one is available. I return to the challenge list.
+
+1:45 to 2:20. Search and filters
+
+Actions: Search for tom. Select Fills and To try. Open a result, then go back. Search for zzzz to show no results. Select Clear search and filters.
+
+Voice:
+I open Challenges and search for tom. I choose Fills and To try, so the results match the search and both filters. Search includes descriptions, restrictions, difficulty and kit pieces. I open a matching result, then return to the list. I enter a search with no matches. Clear search and filters resets the choices and restores the full list.
+
+2:20 to 3:05. Add a challenge
+
+Actions: Select Add. Try Save challenge before filling the required fields. Then use the sample text below. Choose Fill, Beginner, kick, rack tom and floor tom. Remove snare from the selection. Use 85 BPM, 10 minutes and 4/4. Select Save challenge.
+
+Voice:
+I select Add and try saving before the required fields are complete. The form shows validation errors. I enter Two-tom practice as the title and describe a one-bar fill. I choose kick, rack tom and floor tom, then add a restriction requiring an eighth-note rest. I set the tempo to eighty-five beats per minute, practice time to ten minutes and time signature to four-four. Saving valid values adds the exercise and opens its details.
+
+3:05 to 3:50. Edit and progress
+
+Actions: Select Edit challenge. Change the title to Two-tom practice at 90 BPM and the tempo to 90. Save changes. Start another edit, change the title, then Cancel. Mark the saved challenge complete and view Progress. Open it again, select Mark unfinished, then mark it complete again.
+
+Voice:
+I open Edit challenge and change the title and tempo to ninety beats per minute. Save changes updates the existing exercise. I start another edit, type an unsaved title and select Cancel. The saved title remains. I mark the exercise complete and open My progress. This page shows completed exercises, their count, suggested practice minutes and the number of custom challenges. I test Mark unfinished, then mark the exercise complete again.
+
+3:50 to 4:25. Reload and delete
+
+Actions: Reload the web page, or fully reload the project in Expo Go. Sign in again. Open Challenges and select My challenges. Check the edited exercise. Open Delete challenge and Cancel first. Open the confirmation again, confirm Delete challenge, then check Progress.
+
+Voice:
+I reload and sign in again. My challenge still appears with its edited title, tempo and completion record. AsyncStorage keeps practice data between sessions, while login state resets on reload. I open Delete challenge and select Cancel to keep the exercise. I open the confirmation again and confirm deletion. The challenge and its completion record disappear, and My progress updates.
+
+4:25 to 5:00. Logout and sources
+
+Actions: Select Log out and show Welcome. On the web, try browser Back and opening /today while signed out. For a phone recording, show the entry screen after logout and check any available back navigation. Finish on Welcome.
+
+Voice:
+I log out. The app returns to Welcome and protects the main screens. I used four course ZIPs as references for hooks, props, navigation, forms and storage. I received AI assistance with the code, interface, tests and documentation, as described in the README. Version one point one point one uses Expo SDK fifty-eight. This demonstration shows the web version at phone width.
+
+SAMPLE FORM TEXT - NOT SPOKEN
+
+Title:
+Two-tom practice
+
+Description:
+Create a one-bar fill using rack tom, floor tom and kick. Play it after three bars of a steady groove.
+
+Restrictions:
+Use only rack tom, floor tom and kick. Leave at least one eighth-note rest. Do not use snare or cymbals.
+
+Edit title:
+Two-tom practice at 90 BPM

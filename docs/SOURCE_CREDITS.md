@@ -1,6 +1,6 @@
 # Source credits
 
-Updated November 22, 2026, for version 1.1.0.
+Updated November 23, 2026, for version 1.1.1.
 
 ## Supplied course ZIPs
 
@@ -21,7 +21,7 @@ The original MIT notice naming 650 Industries/Expo remains in [LICENSE](../LICEN
 
 The app retains the course's JavaScript/JSX, state hooks, callback props, array operations, reusable components, Expo Router, Zod, and AsyncStorage patterns. A small shared Context supplies state across screens. The [code guide](CODE_GUIDE.md) lists the files and patterns.
 
-AI-assisted additions include challenge data, daily assignments, editing, completion tracking, protected navigation, validated storage, save-error handling, tests, and release materials. Version 1.1.0 uses a plain light layout and a single-save busy flag. It is adapted code, not an unchanged copy of code from another author.
+AI-assisted additions include challenge data, daily assignments, editing, completion tracking, protected navigation, validated storage, save-error handling, tests, and release materials. Version 1.1.1 uses a plain light layout with blue and cool grey colors and a single-save busy flag. It is adapted code, not an unchanged copy of code from another author.
 
 The logo and app icon use simple shapes drawn for Flaminary. Retained Expo/course assets keep their original notices. Installed icons come from [React Native Vector Icons](https://github.com/oblador/react-native-vector-icons).
 

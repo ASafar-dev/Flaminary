@@ -14,7 +14,7 @@ export default function EmptyState({
     return (
         <View style={[styles.container, style]}>
             <View style={styles.icon}>
-                <Ionicons name={icon} size={27} color={colors.lime} />
+                <Ionicons name={icon} size={27} color={colors.primary} />
             </View>
             <Text style={styles.title}>{title}</Text>
             {message ? <Text style={styles.message}>{message}</Text> : null}

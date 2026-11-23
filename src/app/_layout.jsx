@@ -6,6 +6,7 @@ import { SafeAreaProvider } from "react-native-safe-area-context";
 import AppScreen from "../components/AppScreen";
 import Brand from "../components/Brand";
 import EmptyState from "../components/EmptyState";
+import { colors } from "../constants/theme";
 import { AppProvider, useApp } from "../context/AppContext";
 
 function Navigation() {
@@ -15,7 +16,7 @@ function Navigation() {
         return (
             <AppScreen centered>
                 <Brand />
-                <ActivityIndicator color="#285548" size="large" style={styles.loader} />
+                <ActivityIndicator color={colors.primary} size="large" style={styles.loader} />
                 <Text style={styles.loadingText}>Loading my challenges...</Text>
             </AppScreen>
         );
@@ -63,7 +64,7 @@ export default function RootLayout() {
 }
 
 const styles = StyleSheet.create({
-    background: { backgroundColor: "#F5F3EE" },
+    background: { backgroundColor: colors.background },
     loader: { marginTop: 40, marginBottom: 20 },
-    loadingText: { color: "#61736B", textAlign: "center", fontSize: 15 },
+    loadingText: { color: colors.muted, textAlign: "center", fontSize: 15 },
 });

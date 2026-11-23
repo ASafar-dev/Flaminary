@@ -28,12 +28,12 @@
 - Keep licenses, credits, and the honest AI-use statement.
 - Grant the instructor access to the private repository.
 - Verify signatures on new commits.
-- Export the source ZIP from tag v1.1.0 and record the full SHA and checksum in the adjacent release record.
+- Export the source ZIP from tag v1.1.1 and record the full SHA and checksum in the adjacent release record.
 - Include code, required assets, Expo configuration, package.json, and package-lock.json.
 - Exclude node_modules, .expo, generated builds, .git, and local machine files.
 - Compare the ZIP with the committed tree and test a fresh extraction.
 - Include the screen flow and screenshots of the updated app.
-- Record an approximately five-minute narrated MP4 from the final version. Identify synthetic narration and the tested platform.
+- Record an approximately five-minute MP4 from the final version using your own voice. Identify the tested platform. This update provides screenshots and a narration guide; the student records the demo.
 
 ## Recording outline
 
