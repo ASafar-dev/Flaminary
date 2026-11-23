@@ -5,6 +5,7 @@ import AppScreen from "../../components/AppScreen";
 import ChallengeCard from "../../components/ChallengeCard";
 import EmptyState from "../../components/EmptyState";
 import FeedbackBanner from "../../components/FeedbackBanner";
+import { colors } from "../../constants/theme";
 import { useApp } from "../../context/AppContext.jsx";
 
 export default function ProgressScreen() {
@@ -91,20 +92,20 @@ const styles = StyleSheet.create({
         gap: 16,
         marginBottom: 24,
     },
-    heading: { color: "#203B35", fontSize: 26, fontWeight: "700", flex: 1 },
+    heading: { color: colors.text, fontSize: 26, fontWeight: "700", flex: 1 },
     logoutAction: { minHeight: 44, justifyContent: "center", paddingLeft: 10 },
-    logoutText: { color: "#285548", fontSize: 16, fontWeight: "600" },
+    logoutText: { color: colors.primary, fontSize: 16, fontWeight: "600" },
     summary: {
-        backgroundColor: "#FFFFFF",
+        backgroundColor: colors.surface,
         borderWidth: 1,
-        borderColor: "#D8DED7",
+        borderColor: colors.border,
         borderRadius: 10,
         padding: 20,
         marginBottom: 26,
     },
-    count: { color: "#203B35", fontSize: 16, lineHeight: 25, marginBottom: 10 },
-    note: { color: "#61736B", fontSize: 14, lineHeight: 22, marginTop: 4 },
-    sectionHeading: { color: "#203B35", fontSize: 20, fontWeight: "600", marginBottom: 16 },
+    count: { color: colors.text, fontSize: 16, lineHeight: 25, marginBottom: 10 },
+    note: { color: colors.muted, fontSize: 14, lineHeight: 22, marginTop: 4 },
+    sectionHeading: { color: colors.text, fontSize: 20, fontWeight: "600", marginBottom: 16 },
     completedItem: { marginBottom: 8 },
-    date: { color: "#61736B", fontSize: 14, marginBottom: 8 },
+    date: { color: colors.muted, fontSize: 14, marginBottom: 8 },
 });

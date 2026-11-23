@@ -5,6 +5,7 @@ import AppButton from "../../components/AppButton";
 import AppScreen from "../../components/AppScreen";
 import EmptyState from "../../components/EmptyState";
 import FeedbackBanner from "../../components/FeedbackBanner";
+import { colors } from "../../constants/theme";
 import { useApp } from "../../context/AppContext.jsx";
 import { KIT_PIECES } from "../../data/constants.js";
 
@@ -90,21 +91,21 @@ export default function TodayScreen() {
 }
 
 const styles = StyleSheet.create({
-    date: { color: "#61736B", fontSize: 16, marginBottom: 8 },
-    heading: { color: "#203B35", fontSize: 26, fontWeight: "700", marginBottom: 8 },
-    subtitle: { color: "#61736B", fontSize: 16, lineHeight: 24, marginBottom: 24 },
+    date: { color: colors.muted, fontSize: 16, marginBottom: 8 },
+    heading: { color: colors.text, fontSize: 26, fontWeight: "700", marginBottom: 8 },
+    subtitle: { color: colors.muted, fontSize: 16, lineHeight: 24, marginBottom: 24 },
     card: {
-        backgroundColor: "#FFFFFF",
+        backgroundColor: colors.surface,
         borderWidth: 1,
-        borderColor: "#D8DED7",
+        borderColor: colors.border,
         borderRadius: 10,
         padding: 20,
         marginBottom: 16,
     },
-    category: { color: "#61736B", fontSize: 14, marginBottom: 10 },
-    title: { color: "#203B35", fontSize: 22, lineHeight: 29, fontWeight: "600", marginBottom: 18 },
-    label: { color: "#203B35", fontSize: 16, fontWeight: "600", marginBottom: 6 },
-    body: { color: "#203B35", fontSize: 16, lineHeight: 25, marginBottom: 14 },
-    details: { borderTopWidth: 1, borderTopColor: "#D8DED7", paddingTop: 16, marginTop: 2 },
-    completed: { color: "#285548", fontSize: 16, fontWeight: "600" },
+    category: { color: colors.muted, fontSize: 14, marginBottom: 10 },
+    title: { color: colors.text, fontSize: 22, lineHeight: 29, fontWeight: "600", marginBottom: 18 },
+    label: { color: colors.text, fontSize: 16, fontWeight: "600", marginBottom: 6 },
+    body: { color: colors.text, fontSize: 16, lineHeight: 25, marginBottom: 14 },
+    details: { borderTopWidth: 1, borderTopColor: colors.border, paddingTop: 16, marginTop: 2 },
+    completed: { color: colors.success, fontSize: 16, fontWeight: "600" },
 });

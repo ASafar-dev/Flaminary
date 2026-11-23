@@ -16,7 +16,7 @@ export default function AppButton({
     const inactive = disabled || loading;
     const foreground =
         variant === "primary"
-            ? colors.onLime
+            ? colors.onPrimary
             : variant === "danger"
               ? colors.error
               : colors.primary;
@@ -72,10 +72,10 @@ const styles = StyleSheet.create({
         gap: 8,
         borderWidth: 1,
     },
-    primary: { backgroundColor: colors.lime, borderColor: colors.lime },
+    primary: { backgroundColor: colors.primary, borderColor: colors.primary },
     secondary: { backgroundColor: colors.surface, borderColor: colors.border },
     ghost: { backgroundColor: "transparent", borderColor: "transparent" },
-    danger: { backgroundColor: colors.errorSurface, borderColor: "#E5BEB6" },
+    danger: { backgroundColor: colors.errorSurface, borderColor: colors.errorBorder },
     text: { fontSize: 16, fontWeight: "600", lineHeight: 23 },
     disabled: { opacity: 0.5 },
     pressed: { opacity: 0.75 },

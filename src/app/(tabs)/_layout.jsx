@@ -1,6 +1,7 @@
 import { Ionicons } from "@react-native-vector-icons/ionicons";
 import { Tabs } from "expo-router";
 import { useSafeAreaInsets } from "react-native-safe-area-context";
+import { colors } from "../../constants/theme";
 
 export default function PracticeTabs() {
     const insets = useSafeAreaInsets();
@@ -10,12 +11,12 @@ export default function PracticeTabs() {
             backBehavior="history"
             screenOptions={{
                 headerShown: false,
-                sceneStyle: { backgroundColor: "#F5F3EE" },
-                tabBarActiveTintColor: "#285548",
-                tabBarInactiveTintColor: "#61736B",
+                sceneStyle: { backgroundColor: colors.background },
+                tabBarActiveTintColor: colors.primary,
+                tabBarInactiveTintColor: colors.muted,
                 tabBarStyle: {
-                    backgroundColor: "#FFFFFF",
-                    borderTopColor: "#D8DED7",
+                    backgroundColor: colors.surface,
+                    borderTopColor: colors.border,
                     height: 60 + Math.max(insets.bottom, 10),
                     paddingTop: 8,
                     paddingBottom: Math.max(insets.bottom, 10),

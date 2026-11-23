@@ -1,6 +1,6 @@
 # Code guide
 
-Flaminary uses plain JavaScript and JSX with the patterns taught in the supplied MyTasks projects. Version 1.1.0 simplifies the interface and storage code and updates Expo to SDK 58.
+Flaminary uses plain JavaScript and JSX with the patterns taught in the supplied MyTasks projects. Version 1.1.1 keeps the simple interface and storage code and uses a blue and cool grey palette on Expo SDK 58. Shared color values are in `src/constants/theme.js`.
 
 ## Course patterns
 

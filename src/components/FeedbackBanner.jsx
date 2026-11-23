@@ -5,7 +5,7 @@ import { colors, radii, typography } from "../constants/theme";
 export default function FeedbackBanner({ message, type = "error", onDismiss, style }) {
     if (!message) return null;
     const error = type === "error";
-    const color = error ? colors.error : colors.lime;
+    const color = error ? colors.error : colors.primary;
     return (
         <View
             accessibilityRole="alert"
@@ -44,7 +44,7 @@ const styles = StyleSheet.create({
         gap: 10,
         marginBottom: 16,
     },
-    error: { backgroundColor: colors.errorSurface, borderColor: "#E5BEB6" },
+    error: { backgroundColor: colors.errorSurface, borderColor: colors.errorBorder },
     message: { ...typography.small, fontSize: 15, lineHeight: 22, flex: 1 },
     dismiss: { minWidth: 44, minHeight: 44, alignItems: "center", justifyContent: "center" },
 });

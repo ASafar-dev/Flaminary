@@ -64,6 +64,6 @@ const styles = StyleSheet.create({
     },
     selected: { backgroundColor: colors.primary, borderColor: colors.primary },
     label: { fontSize: 15, fontWeight: "500", color: colors.muted },
-    selectedLabel: { color: colors.onLime },
+    selectedLabel: { color: colors.onPrimary },
     pressed: { opacity: 0.75 },
 });
